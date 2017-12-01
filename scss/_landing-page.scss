@@ -1,0 +1,42 @@
+#landing-page {
+	height: 100vh;
+}
+
+h1 {
+	font-size: calc(190% + 0.25vw);
+	padding-top: 17vh;
+	margin-bottom: 2vh;
+}
+
+h3 {
+	font-size: calc(120% + 0.25vw);
+	font-weight: 400;
+	letter-spacing: 5px;
+}
+
+#begin-btn {
+	font-size: calc(130% + 0.25vw);
+	font-weight: 700;
+	margin-top: 40vh;
+	transition: color 0.5s;
+	
+	&.glow {
+		color: $blue;
+	}
+	
+	&:hover {
+		color: $orange;
+		text-shadow: none;
+		text-decoration: underline;
+	}
+}
+
+@media(min-width: 768px) {
+	h3 {
+		font-size: calc(240% + 0.25vw);
+	}
+	
+	#begin-btn {
+		font-size: calc(160% + 0.25vw);
+	}
+}

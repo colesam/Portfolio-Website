@@ -1,0 +1,78 @@
+.btn-custom {
+	background: $gray;
+	border: 1px dashed $blue;
+	border-radius: 5px;
+
+	color: $black;
+	font-size: calc(120% + 0.25vw);
+	// margin-top: 1vh;
+	// margin-bottom: 1vh;
+	margin-left: 0;
+	margin-right: 0;
+	
+	padding: 0 5%;
+	width: 70%;
+	
+	a {
+		color: $black;
+		font-size: calc(100% + 0.25vw);
+	}
+	
+	i {
+		color: $blue;
+	}
+	
+	&:hover {
+		border: 1px solid $blue;
+		cursor: pointer;
+	}
+}
+
+
+p {
+	font-size: calc(110% + 0.25vw);
+}
+
+#resume-buttons {
+	align-self: stretch;
+	// margin-bottom: 3vh;
+	width: 100%;
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+	#resume-buttons {
+		width: 50%;
+	}
+	
+	#about-text {
+		width: 80%;
+	}
+}
+
+@media (min-width: 992px) {
+	#resume-buttons {
+		width: 40%;
+		// padding-top: 5vh;
+		// padding-bottom: 5vh;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
+	#about-text {
+		width: 60%;
+	}
+	
+	.btn-custom {
+		background: $gray;
+	}
+}
+
+@media (min-width: 1200px) {
+	#resume-buttons {
+		width: 25%;
+	}
+}

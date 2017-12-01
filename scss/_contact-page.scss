@@ -1,0 +1,66 @@
+form {
+    background: $gray;
+    border: 1px solid $transparent-gray;
+    border-radius: 3px;
+    padding: 10px;
+    // margin-bottom: 10vh;
+    
+    .btn-custom {
+        background: white;
+        width: 100%;
+    }
+}
+
+label {
+    color: $black;
+}
+
+.social-media-item {
+    // margin-bottom: 2vh;
+    
+    i {
+        font-size: calc(200% + 0.25vw);
+    }
+}
+
+@media (min-width: 768px) {
+    .form-control.small {
+    	width: 60%;
+    } 
+    
+    form .btn-custom {
+        width: 60%;
+    }
+    
+    form {
+        // margin-bottom: 15vh;
+    }
+    
+    .social-media-item {
+        padding-left: 10vw;
+        
+        i {
+            font-size: calc(250% + 0.25vw);
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    #contact-page .title {
+        // margin-bottom: 5vh;
+    }
+    
+    .social-media-item {
+        padding-left: 20vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    form .btn-custom {
+        width: 45%;
+    }
+    
+    .social-media-item {
+        padding-left: 30vw;
+    }
+}
