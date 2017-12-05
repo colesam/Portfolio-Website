@@ -53,7 +53,7 @@
                     <h4 class="center-text">Newsroom Wireframes</h4>
                     <p>
                         While working as an intern for the University of St. Thomas Web Services, 
-                        I helped with a project to transition our Newsroom (https://stthomas.edu/news) to a new Wordpress theme.
+                        I helped with a project to transition our <a href="https://stthomas.edu/news" class="inline underline" target="_blank">Newsroom</a> to a new Wordpress theme.
                     </p>
                     <p>
                         My primary responsibility was to create these wireframes in Adobe Illustrator. 

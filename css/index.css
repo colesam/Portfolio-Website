@@ -13,6 +13,9 @@ a {
     color: #ffaf54 !important;
     text-decoration: none; }
 
+a.underline:hover {
+  text-decoration: underline; }
+
 body {
   font-family: 'Roboto', Arial;
   font-weight: 400; }
@@ -27,8 +30,15 @@ h2 {
 .disabled {
   pointer-events: none; }
 
+.dotted-line {
+  width: 15%;
+  border-bottom: 1px dashed #1da0ba; }
+
 .grayed {
   opacity: 0.5; }
+
+.inline {
+  display: inline-block; }
 
 .no-margin {
   margin: 0; }
@@ -80,13 +90,6 @@ h2 {
 
 .flex-wrap {
   flex-wrap: wrap; }
-
-.dotted-line {
-  width: 15%;
-  border-bottom: 1px dashed #1da0ba; }
-
-a.underline:hover {
-  text-decoration: underline; }
 
 @media (min-width: 768px) {
   .dotted-border {

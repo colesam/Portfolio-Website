@@ -1,4 +1,7 @@
-//	COLORS
+//	NOTE: commented out css that uses vh for unit uses the handleVH() method in index.js
+
+
+//  COLORS
 $black: rgb(38, 39, 48);
 $blue: rgb(29, 160, 186);
 $blue-dark: rgb(64, 93, 109);
@@ -9,46 +12,49 @@ $gray: rgb(245, 245, 245);
 $transparent-gray: rgba(0, 0, 0, 0.1);
 $transparent-black: rgba(38, 39, 48, 0.95);
 
-//	TEXT SHADOWS
+//  TEXT SHADOWS
 $text-shadow-light: 1px 1px 1px rgba(0, 0, 0, 0.2);
 $text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 
-//	BOX SHADOWS
+//  BOX SHADOWS
 $box-shadow-light: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.3);
 $box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 $box-shadow-bottom-blue: 0 3px 5px rgba(76, 184, 196, 0.3);
-$box-shadow-white: 0 0 3px 1px rgba(255, 255, 255, 0.8);
 
 a {
-	display: block;
-	font-family: Arial;
-	transition: all 0.2s;
-	
-	&:hover {
-		color: $orange !important;	//	important tag necessary for the anchor tags that do not have an href attribute
-		cursor: pointer;
-		text-decoration: none;
-	}
-	
-	&:focus {
-		color: $orange !important;
-		text-decoration: none;
-	}
-	
-	&:active {
-		color: $orange !important;
-		text-decoration: none;
-	}
+    display: block;
+    font-family: Arial;
+    transition: all 0.2s;
+    
+    &:hover {
+        color: $orange !important;  //  important tag necessary for the anchor tags that do not have an href attribute
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    &:focus {
+        color: $orange !important;
+        text-decoration: none;
+    }
+    
+    &:active {
+        color: $orange !important;
+        text-decoration: none;
+    }
+}
+
+a.underline:hover {
+    text-decoration: underline;
 }
 
 body {
-	font-family: 'Roboto', Arial;
-	font-weight: 400;
+    font-family: 'Roboto', Arial;
+    font-weight: 400;
 }
 
 h2 {
-	font-weight: 700;
-	letter-spacing: 2px;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 .center-text {
@@ -56,135 +62,139 @@ h2 {
 }
 
 .disabled {
-	pointer-events: none;
-}
-
-.grayed {
-	opacity: 0.5;
-}
-
-.no-margin {
-	margin: 0;
-}
-
-.full-page {
-	// min-height: 93vh;
-}
-
-.row {
-	margin: 0;
-}
-
-.text-shadow {
-	text-shadow: $text-shadow;
-}
-
-.text-shadow-light {
-	text-shadow: $text-shadow-light;
-}
-
-.title {
-	width: 100%;
-	// margin-bottom: 6vh;
-	
-	h2 {
-		display: inline-block;
-		margin: 0;
-		font-size: calc(250% + 0.25vw);
-	}
-}
-
-.section {
-	// padding-top: 7vh;
-}
-
-.flex-row {
-	display: flex;
-	flex-direction: row;
-}
-
-.flex-col {
-	display: flex;
-	flex-direction: column;
-}
-
-.justify-center {
-	justify-content: center;
-}
-
-.justify-space-between {
-	justify-content: space-between;
-}
-
-.justify-space-around {
-	justify-content: space-around;
-}
-
-.justify-stretch {
-	justify-content: stretch
-}
-
-.justify-start {
-	justify-content: flex-start;
-}
-
-.align-center {
-	align-items: center;
-}
-
-.align-start {
-	align-items: flex-start;
-}
-
-.flex-wrap {
-	flex-wrap: wrap;
+    pointer-events: none;
 }
 
 .dotted-line {
-	width: 15%;
-	border-bottom: 1px dashed $blue;
+    width: 15%;
+    border-bottom: 1px dashed $blue;
 }
 
-a.underline:hover {
-	text-decoration: underline;
+.full-page {
+    // min-height: 93vh;
+}
+
+.grayed {
+    opacity: 0.5;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.row {
+    margin: 0;
+}
+
+.section {
+    // padding-top: 7vh;
+}
+
+.text-shadow {
+    text-shadow: $text-shadow;
+}
+
+.text-shadow-light {
+    text-shadow: $text-shadow-light;
+}
+
+.title {
+    width: 100%;
+    // margin-bottom: 6vh;
+    
+    h2 {
+        display: inline-block;
+        margin: 0;
+        font-size: calc(250% + 0.25vw);
+    }
+}
+
+
+//	FLEXBOX CLASSES
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.justify-space-around {
+    justify-content: space-around;
+}
+
+.justify-stretch {
+    justify-content: stretch
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
 }
 
 @media (min-width: 768px) {
-	.dotted-border {
-		border: 1px dashed $blue;
-		
-		position: fixed;
-			top: 0px;
-			bottom: 0px;
-			
-		&.left {
-			left: 15px;
-		}
-		
-		&.right {
-			right: 15px;
-		}
-	}
-	
-	.dotted-line:nth-of-type(2) {
-		width: 55%;
-	}
+    .dotted-border {
+        border: 1px dashed $blue;
+        
+        position: fixed;
+            top: 0px;
+            bottom: 0px;
+            
+        &.left {
+            left: 15px;
+        }
+        
+        &.right {
+            right: 15px;
+        }
+    }
+    
+    .dotted-line:nth-of-type(2) {
+        width: 55%;
+    }
 }
 
+
+//	MEDIA QUERIES
 @media (min-width: 992px) {
 
 }
 
 @media (min-width: 1200px) {
-	body
-	
-	h1 {
-		font-size: 8vw;
-	}
-	
-	.full-page {
-		// min-height: 94vh;
-	}
+    body
+    
+    h1 {
+        font-size: 8vw;
+    }
+    
+    .full-page {
+        // min-height: 94vh;
+    }
 }
 
 @import 'landing-page';

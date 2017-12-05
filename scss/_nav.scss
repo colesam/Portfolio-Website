@@ -24,7 +24,7 @@ $nav-transition-time: 0.4s;
     display: flex;
         flex-direction: column;
         justify-content: center;
-    // height: 7vh;
+//  height: 7vh;
     padding: 0 4vw;
     position: fixed;
         right: 0;
@@ -61,7 +61,7 @@ $nav-transition-time: 0.4s;
     display: flex;
         justify-content: space-between;
         align-items: center;
-    // height: 7vh;
+//  height: 7vh;
     padding: 1vh 0 1vh 5vw;
     position: relative;
     z-index: 1;
@@ -74,9 +74,9 @@ $nav-transition-time: 0.4s;
         flex-direction: column;
         justify-content: space-around;
     padding: 0 10vw;
-    // height: 35vh;
+//  height: 35vh;
     position: fixed;
-        // top: -27.8vh;
+//      top: -27.8vh;
     transition: all $nav-transition-time;
     width: 100vw;
     
@@ -122,6 +122,6 @@ $nav-transition-time: 0.4s;
     }
     
     #navbar {
-        height: 6vh;
+//      height: 6vh;
     }
 }
