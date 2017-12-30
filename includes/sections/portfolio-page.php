@@ -12,6 +12,44 @@
                     <!--offset col-->
                 </div>
                 <div class="col-12 col-md-5">
+                    <img class="img-fluid" src="includes/img/php-blog.jpg"></img>
+                </div>
+                <div class="col-12 col-md-7">
+                    <h4 class="center-text">PHP Blog CMS</h4>
+                    <p>
+                        This project is a content management system for blogging using the Laravel PHP framework. I started this project to learn more about Laravel and MVC frameworks.
+                        The website will allow regular users to view blog posts, sign in, and create, edit, and delete comments on blog posts. The admin of the site will be able to 
+                        sign in and create, edit, and delete blog posts, as well as delete comments made by users.
+                    </p> 
+
+                    <p>
+                        To create this project I am currently using:
+                    </p>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                        <li>PHP</li>
+                        <li>Laravel</li>
+                    </ul>
+                    <div class="row">
+                        <div class="">
+                            <!--offset col-->
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <a href="https://github.com/colesam/Laravel-Blog" target="_blank" class="underline">View on Github</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="divider-line"></div>
+            
+            <div class="row portfolio-item">
+                <div class="">
+                    <!--offset col-->
+                </div>
+                <div class="col-12 col-md-5">
                     <img class="img-fluid" src="includes/img/chess-club-logo.jpg"></img>
                 </div>
                 <div class="col-12 col-md-7">
