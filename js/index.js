@@ -1,22 +1,20 @@
 /*global $*/
-/*global landingPage*/
-/*global aboutPage*/
-/*global portfolioPage*/
-/*global contactPage*/
 
-//  SECTION OBJECT
-    //  this object represents a section of the website (home, about, etc.)
+
+/*  SECTION OBJECT
+        this object represents a section of the website (home, about, etc.)
     
-    //  object variables
-    //      section:    a selector that represents the section on the page
-    //      nav:        a selector that represents the nav button for this section
-    //      startPos:   the number of pixels between the top of the page and the start of this section
-    //      endPos:     the number of pixels between the top of the page and the end of this section
+        object variables
+            section:    a selector that identifies the section on the page
+            nav:        a selector that identifies the nav button for this section
+            startPos:   the number of pixels between the top of the page and the start of this section
+            endPos:     the number of pixels between the top of the page and the end of this section
     
-    //  object methods
-    //      contains:   returns true if the position passed falls between it's start and end positions
-    //      scrollTo:   scrolls so that the top of the window is touching this.startPos
-    //      setActive:  sets this section of the website as the one the user is looking at
+        object methods
+            contains:   returns true if the position passed falls between it's start and end positions
+            scrollTo:   scrolls so that the top of the window is touching this.startPos
+            setActive:  sets this section of the website as the one the user is looking at
+*/
     
 function Section(name) {
     
@@ -29,7 +27,7 @@ function Section(name) {
 
 Section.prototype.contains = function(position) {
     
-    //  returns true if the pixel position passed as a parameter is between the start
+    //  returns true if the position passed as a parameter is between the start
     //  and end position of the Section object
     return (position >= this.startPos && position < this.endPos);
     
@@ -40,213 +38,97 @@ Section.prototype.scrollTo = function() {
     //  scroll to the section leaving room for the navbar at the top
     $('html,body').animate({scrollTop: this.startPos - navbarHeight}, 500);
     
+    if(navbarIsOpen()) {
+            
+            toggleNavbar();
+            
+    }
+    
 }
 
 //  initialize landingPage section so it can be used for the navbar functions
-    var landingPage     = new Section('landing'),
-        portfolioPage   = new Section('portfolio'),
-        aboutPage       = new Section('about'),
-        contactPage     = new Section('contact');
+var landingPage     = new Section('landing'),
+    portfolioPage   = new Section('portfolio'),
+    aboutPage       = new Section('about'),
+    contactPage     = new Section('contact');
         
 
-//  VH HANDLER
+/*  VH HANDLER
+        When a mobile phone user opens a keyboard or rotates the phone orientation, the vertical height of their
+        browser changes, which affects any elements styled in vh units. The VH Handler converts all vh units to
+        pixels when the page loads to prevent this.
+*/
+
 var vhMultiplier = $(window).height() / 100;
 
-function handleVH(elements) {
+/*  VHElement Object
+        this object represents an element on the HTML doc that needs its VH units hardcoded to pixels
     
-    //  elements parameter is an array of objects with a selector and vh attribute
-    for(var i = 0; i < elements.length; i++) {
+        object variables
+            mediaQuery:     int     - the minimum width of the browser in pixels for the style to be applied (null means no query)
+            selector:       String  - the selector that identifies the element to be restyled (e.g ".btn-primary")
+            attr:           String  - the css attribute that is being styled (e.g. height or margin-top)
+            vh:             int     - the number of vh units
+    
+        object methods
+            hardcode:  
+*/
+
+function VHElement(mediaQuery, selector, attr, vh) {
+    
+    this.mediaQuery = mediaQuery;
+    this.selector   = selector;
+    this.attr       = attr;
+    this.vh         = vh;
+    
+}
+
+VHElement.prototype.hardcode = function() {
         
-        //  error checking
-        if($(elements[i].selector) == null) {
-            
-            console.log(elements[i].selector + ' was null');
-            
-        }
+    //  check for media query
+    if($(window).width() >= this.mediaQuery || this.mediaQuery == null) {
         
-        //  check for media query
-        if($(window).width() >= elements[i].mediaQuery || elements[i].mediaQuery == null) {
-            
-            //  apply pixel values based off of vh specified in object
-            var pixels = elements[i].vh * vhMultiplier;
-            $(elements[i].selector).css(elements[i].attr, pixels);
-            
-        }
+        //  apply pixel values based off of vh specified in object
+        var pixels = this.vh * vhMultiplier;
+        $(this.selector).css(this.attr, pixels);
         
     }
     
 }
 
+//  the elements array holds all the VHElement objects which are executed under the window load function below
 var elements = [
     
     //  nav.scss
-    {
-        mediaQuery:     null,
-        selector:       '#hamburger-menu',
-        attr:           'height',
-        vh:             7
-    },
-    
-    {
-        mediaQuery:     null,
-        selector:       '#navbar',
-        attr:           'height',
-        vh:             7
-    },
-    
-    {
-        mediaQuery:     null,
-        selector:       '#navbar-hb',
-        attr:           'height',
-        vh:             35
-    },
-    
-    {
-        mediaQuery:     null,
-        selector:       '#navbar-hb',
-        attr:           'top',
-        vh:             -27.8
-    },
-    
-    {
-        mediaQuery:     1200,
-        selector:       '#navbar',
-        attr:           'height',
-        vh:             6
-    },
+    new VHElement(null, '#hamburger-menu',      'height',           7),
+    new VHElement(null, '#navbar',              'height',           7),
+    new VHElement(null, '#navbar-hb',           'height',           35),
+    new VHElement(null, '#navbar-hb',           'top',              -27.8),
+    new VHElement(1200, '#navbar',              'height',           6),
     
     //  index.scss
-    {
-        mediaQuery:     null,
-        selector:       '.title',
-        attr:           'margin-bottom',
-        vh:             6
-    },
-    
-    {
-        mediaQuery:     null,
-        selector:       '.full-page',
-        attr:           'min-height',
-        vh:             93
-    },
-    
-    {
-        mediaQuery:     1200,
-        selector:       '.full-page',
-        attr:           'min-height',
-        vh:             94
-    },
-    
-    {
-        mediaQuery:     null,
-        selector:       '.section',
-        attr:           'padding-top',
-        vh:             7
-    },
-    
-    //  landing-page.scss
+    new VHElement(null, '.title',               'margin-bottom',    6),
+    new VHElement(null, '.full-page',           'min-height',       93),
+    new VHElement(null, '.section',             'padding-top',      7),
+    new VHElement(1200, '.full-page',           'min-height',       94),
 
-    
     //  about-page.scss
-    {
-        mediaQuery:     null,
-        selector:       '.btn-custom',
-        attr:           'margin-top',
-        vh:             1
-    },
-    
-    {
-        mediaQuery:     null,
-        selector:       '.btn-custom',
-        attr:           'margin-bottom',
-        vh:             1
-    },
-    
-    {
-        mediaQuery:     null,
-        selector:       '#resume-buttons',
-        attr:           'margin-bottom',
-        vh:             3
-    },
-    
-    {
-        mediaQuery:     992,
-        selector:       '#resume-buttons',
-        attr:           'padding-top',
-        vh:             5
-    },
-    
-    {
-        mediaQuery:     992,
-        selector:       '#resume-buttons',
-        attr:           'padding-bottom',
-        vh:             5
-    },
-    
+    new VHElement(null, '.btn-custom',          'margin-top',       1),
+    new VHElement(null, '.btn-custom',          'margin-bottom',    1),
+    new VHElement(null, '#resume-buttons',      'margin-bottom',    3),    
+    new VHElement(992,  '#resume-buttons',      'padding-top',      5),
+    new VHElement(992,  '#resume-buttons',      'padding-bottom',   5),
+
     //  portfolio-page.scss
-    {
-        mediaQuery:     null,
-        selector:       '.divider-line',
-        attr:           'margin-bottom',
-        vh:             5
-    },
-    
-    {
-        mediaQuery:     null,
-        selector:       '.portfolio-item',
-        attr:           'margin-bottom',
-        vh:             5
-    },
-    
-    {
-        mediaQuery:     null,
-        selector:       '.portfolio-item img',
-        attr:           'margin-bottom',
-        vh:             6
-    },
-    
-    {
-        mediaQuery:     null,
-        selector:       '.portfolio-item img',
-        attr:           'margin-bottom',
-        vh:             0
-    },
-    
-    {
-        mediaQuery:     null,
-        selector:       '.portfolio-item h4',
-        attr:           'margin-bottom',
-        vh:             2
-    },
-    
-    {
-        mediaQuery:     null,
-        selector:       '.portfolio-item p',
-        attr:           'margin-bottom',
-        vh:             2
-    },
+    new VHElement(null, '.divider-line',        'margin-bottom',    5),
+    new VHElement(null, '.portfolio-item',      'margin-bottom',    5),    
+    new VHElement(null, '.portfolio-item h4',   'margin-bottom',    2),
+    new VHElement(null, '.portfolio-item p',    'margin-bottom',    2),  
     
     //  contact-page.scss
-    {
-        mediaQuery:     null,
-        selector:       'form',
-        attr:           'margin-bottom',
-        vh:             5
-    },
-    
-    {
-        mediaQuery:     null,
-        selector:       '.social-media-item',
-        attr:           'margin-bottom',
-        vh:             2
-    },
-    
-    {
-        mediaQuery:     992,
-        selector:       '#contact-page .title',
-        attr:           'margin-bottom',
-        vh:             5
-    }
+    new VHElement(null, 'form',                 'margin-bottom',    5),
+    new VHElement(null, '.social-media-item',   'margin-bottom',    2),
+    new VHElement(992,  '#contact-page .title', 'margin-bottom',    5)
     
 ];
 
@@ -312,7 +194,11 @@ function displayNav() {
 $(window).on('load', function() {
     
     //  HARDCODE VH UNITS TO PIXELS TO AVOID BROWSER RESIZING ISSUES
-    handleVH(elements);
+    for(var i = 0; i < elements.length; i++) {
+        
+        elements[i].hardcode();
+        
+    }
     
     
     //  SECTION VARIABLES
@@ -321,6 +207,8 @@ $(window).on('load', function() {
     aboutPage       = new Section('about'),
     contactPage     = new Section('contact');
     
+    
+    //  POST REQUESTS
     
     //  if the page is accessed with a post request
     if(typeof $_POST['submit'] !== 'undefined') {
@@ -333,16 +221,6 @@ $(window).on('load', function() {
 
     //  FADE IN
     $('#begin-btn').addClass('glow');
-    
-    
-    //  BUTTON EVENT LISTENERS
-    $('.btn-custom').hover(
-    
-        //  this hover event scales up the embedded anchor tags of .btn custom buttons
-        function() {$(this).children('a').addClass('anchor-hover');},      //  hover on function
-        function() {$(this).children('a').removeClass('anchor-hover');}    //  hover off function
-        
-    );
     
     
     //  NAVBAR EVENT LISTENERS AND FUNCTIONS
@@ -364,23 +242,11 @@ $(window).on('load', function() {
         
         landingPage.scrollTo();
         
-        if(navbarIsOpen()) {
-            
-            toggleNavbar();
-            
-        }
-        
     });
     
     $(portfolioPage.nav).click(function() {
         
         portfolioPage.scrollTo();
-        
-        if(navbarIsOpen()) {
-            
-            toggleNavbar();
-            
-        }
         
     });
     
@@ -388,31 +254,11 @@ $(window).on('load', function() {
         
         aboutPage.scrollTo();
         
-        if(navbarIsOpen()) {
-            
-            toggleNavbar();
-            
-        }
-        
     });
     
     $(contactPage.nav).click(function() {
         
         contactPage.scrollTo();
-        
-        if(navbarIsOpen()) {
-            
-            toggleNavbar();
-            
-        }
-        
-    });
-    
-    
-    //  LANDING PAGE EVENT LISTENERS
-    $('#phone-button').click(function() {
-        
-        aboutPage.scrollTo();
         
     });
     
