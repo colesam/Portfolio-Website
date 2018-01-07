@@ -2,7 +2,6 @@
 
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Samuel Cole</title>
 
         <!-- bootstrap -->
@@ -16,6 +15,7 @@
 
         <!-- meta data -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
 
         <!--[if IE]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>

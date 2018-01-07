@@ -2,7 +2,7 @@
     $postJSON = json_encode($_POST); 
 ?>
 
-<!-- give JQuery the $_POST variable -->
+<!-- give JQuery the $_POST variable (reference POST REQUESTS section of index.js) -->
 <script>
     var $_POST = <?php echo $postJSON; ?>;
 </script>
