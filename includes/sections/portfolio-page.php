@@ -108,7 +108,7 @@
                             <!--offset col-->
                         </div>
                         <div class="col-12 col-md-6">
-                            <a href="https://github.com/colesam/Chess-Club-Logo" target="_blank" class="underline">View on Github</a>
+                            <a href="https://github.com/colesam/Newsroom-Wireframes" target="_blank" class="underline">View on Github</a>
                         </div>
                     </div>
                 </div>
