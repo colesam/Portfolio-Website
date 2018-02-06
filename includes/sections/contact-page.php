@@ -4,7 +4,7 @@
     <div class="dotted-line"></div>
 </div>
 
-<div class="row">
+<div class="row justify-content-center">
     <!-- FORM MESSAGE -->
     <?php if($msgType=="success" && strlen($msg) > 0) { ?>
             
@@ -18,7 +18,7 @@
     <?php if($msgType=="error" && strlen($msg) > 0) { ?>
             
         <!-- echo error message -->
-        <div class="col-6 offset-3 alert alert-danger">
+        <div class="col-md-6 col-10 alert alert-danger">
             <strong>Error: </strong> <?php echo $msg; ?>
         </div>
             
@@ -27,7 +27,7 @@
 
 	
 	<!-- CONTACT FORM -->
-    <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3" id="contact-form">
+    <div class="col-12 col-md-10 col-lg-8 col-xl-6" id="contact-form">
         <form method="POST" action="<?php $_SERVER['PHP_SELF'] ?>">
             <div class="form-group">
                 <label for="name"> Your Name</label>
@@ -41,7 +41,7 @@
                 <label for="message"> Message</label>
                 <textarea class="form-control" rows="5" name="message"><?php echo isset($_POST['message']) ? $message : ''; ?></textarea>
             </div>
-            <button type="submit" name="submit" class="btn-custom flex-row justify-space-between align-center"><i class="fa fa-envelope" aria-hidden="true"></i> <a class="">Send Message</a></button>
+            <button type="submit" name="submit" class="form-control btn-primary"> Send Message</button>
         </form>
     </div>
     

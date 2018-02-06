@@ -24,6 +24,22 @@ h2 {
   font-weight: 700;
   letter-spacing: 2px; }
 
+.btn-primary {
+  background: #1da0ba;
+  border: 1px solid #1da0ba;
+  font-weight: 700;
+  transition: all 0.2s; }
+  .btn-primary:hover {
+    background: #ffaf54;
+    border: 1px solid #ffaf54;
+    cursor: pointer; }
+  .btn-primary:focus {
+    background: #ffaf54;
+    border: 1px solid #ffaf54; }
+  .btn-primary:active {
+    background: #ffaf54;
+    border: 1px solid #ffaf54; }
+
 .center-text {
   text-align: center; }
 
@@ -87,6 +103,9 @@ h2 {
 
 .align-start {
   align-items: flex-start; }
+
+.align-stretch {
+  align-items: stretch; }
 
 .flex-wrap {
   flex-wrap: wrap; }
@@ -153,43 +172,42 @@ h3 {
 @media (min-width: 768px) {
   .portfolio-item .center-text {
     text-align: left; } }
-.btn-custom {
+.btn-custom, a.btn-custom {
   background: whitesmoke;
-  border: 1px dashed #1da0ba;
-  border-radius: 5px;
+  border: 1px solid #1da0ba;
   color: #262730;
-  font-size: calc(120% + 0.25vw);
-  margin-left: 0;
-  margin-right: 0;
-  padding: 0 5%;
-  width: 70%; }
-  .btn-custom a {
-    color: #262730;
-    font-size: calc(100% + 0.25vw); }
-  .btn-custom i {
-    color: #1da0ba; }
-  .btn-custom:hover {
-    border: 1px solid #1da0ba;
-    cursor: pointer; }
+  font-size: calc(140% + 0.25vw);
+  padding: 5px 17%;
+  transition: all 0.2s; }
+  .btn-custom i, a.btn-custom i {
+    color: #1da0ba;
+    font-size: calc(150% + 0.25vw);
+    transition: all 0.2s; }
+  .btn-custom:hover, a.btn-custom:hover {
+    border: 1px solid #ffaf54; }
+    .btn-custom:hover i, a.btn-custom:hover i {
+      color: #ffaf54; }
 
 p {
   font-size: calc(110% + 0.25vw); }
 
 #resume-buttons {
-  align-self: stretch;
   width: 100%; }
 
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   #resume-buttons {
-    width: 50%; }
-
+    width: 75%; } }
+@media (min-width: 650px) {
+  #resume-buttons {
+    width: 50%; } }
+@media (min-width: 768px) {
   #about-text {
     width: 80%; } }
 @media (min-width: 992px) {
   #resume-buttons {
     width: 40%;
-    padding-left: 0;
-    padding-right: 0; }
+    padding-left: 15px;
+    padding-right: 15px; }
 
   #about-text {
     width: 60%; }
@@ -198,7 +216,9 @@ p {
     background: whitesmoke; } }
 @media (min-width: 1200px) {
   #resume-buttons {
-    width: 25%; } }
+    width: 30%;
+    padding-left: 0;
+    padding-right: 30px; } }
 form {
   background: whitesmoke;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -320,9 +340,6 @@ label {
     visibility: hidden; } }
 @media (min-width: 1200px) {
   #logo {
-    width: 15vw; }
-
-  #navbar {
-    height: 6vh; } }
+    width: 15vw; } }
 
 /*# sourceMappingURL=index.css.map */

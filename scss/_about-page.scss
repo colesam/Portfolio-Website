@@ -1,30 +1,25 @@
-.btn-custom {
+.btn-custom, a.btn-custom {
 	background: $gray;
-	border: 1px dashed $blue;
-	border-radius: 5px;
-
+	border: 1px solid $blue;
 	color: $black;
-	font-size: calc(120% + 0.25vw);
-	// margin-top: 1vh;
-	// margin-bottom: 1vh;
-	margin-left: 0;
-	margin-right: 0;
 	
-	padding: 0 5%;
-	width: 70%;
+	font-size: calc(140% + 0.25vw);
 	
-	a {
-		color: $black;
-		font-size: calc(100% + 0.25vw);
-	}
+	padding: 5px 17%;
+	transition: all 0.2s;
 	
 	i {
 		color: $blue;
+		font-size: calc(150% + 0.25vw);
+		transition: all 0.2s;
 	}
 	
 	&:hover {
-		border: 1px solid $blue;
-		cursor: pointer;
+		border: 1px solid $orange;
+		
+		i {
+			color: $orange;
+		}
 	}
 }
 
@@ -34,20 +29,23 @@ p {
 }
 
 #resume-buttons {
-	align-self: stretch;
 //  margin-bottom: 3vh;
 	width: 100%;
 }
 
-@media (min-width: 576px) {
-
+@media (min-width: 500px) {
+	#resume-buttons {
+		width: 75%;
+	}
 }
 
-@media (min-width: 768px) {
+@media (min-width: 650px) {
 	#resume-buttons {
 		width: 50%;
 	}
-	
+}
+
+@media (min-width: 768px) {
 	#about-text {
 		width: 80%;
 	}
@@ -58,8 +56,8 @@ p {
 		width: 40%;
 //      padding-top: 5vh;
 // 		padding-bottom: 5vh;
-		padding-left: 0;
-		padding-right: 0;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 	
 	#about-text {
@@ -73,6 +71,8 @@ p {
 
 @media (min-width: 1200px) {
 	#resume-buttons {
-		width: 25%;
+		width: 30%;
+		padding-left: 0;
+		padding-right: 30px;
 	}
 }
