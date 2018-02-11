@@ -1,35 +1,23 @@
-<nav id="nav">
-    <div class="box-shadow-blue" id="navbar">
-        <div id="logo">
-            <img src="includes/img/cole-logo-simple.svg" alt="Samuel Cole" class="img-fluid"></img>
-        </div>
-        
-        <div class="center-text" id="main-links">
-            <a class="landing-nav">Home</a>
-            <a class="about-nav">About</a>
-            <a class="portfolio-nav">Portfolio</a>
-            <a class="contact-nav">Contact</a>
-        </div>
-        
-        <div id="hamburger-menu">
-            <i class="fa fa-bars" aria-hidden="true"></i>
-        </div>
-    </div>
-    <div id="navbar-hb">
-        <div class="secondary-link">
-            <a class="landing-nav">Home</a>
-        </div>
-        <div class="separator"></div>
-        <div class="secondary-link">
-            <a class="about-nav">About</a>
-        </div>
-        <div class="separator"></div>
-        <div class="secondary-link">
-            <a class="portfolio-nav">Portfolio</a>
-        </div>
-        <div class="separator"></div>
-        <div class="secondary-link">
-            <a class="contact-nav">Contact</a>
-        </div>
-    </div>
+<nav class="navbar navbar-expand-md">
+	<img class="navbar-logo" src="includes/img/cole-logo-simple.svg" alt="Samuel Cole"></img>
+	<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="oi oi-menu" title="menu" aria-hidden="true"></span>
+	</button>
+	
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="#landing-page">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#about-page">About</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#portfolio-page">Portfolio</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#contact-page">Contact</a>
+			</li>
+		</ul>
+	</div>
 </nav>
