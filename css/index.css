@@ -47,8 +47,12 @@ nav {
 .hidden {
   display: none; }
 
-ul.nav {
-  height: 60px; }
+.nav-link {
+  font-size: calc(110% + 0.25vw);
+  margin-left: 20px; }
+
+.navbar-logo {
+  height: 20px; }
 
 .navbar-toggler {
   border: 1px solid #FFAF54;
@@ -61,11 +65,12 @@ ul.nav {
   border: 1px solid #FFAF54;
   color: 1px solid #FFAF54; }
 
-.navbar-logo {
-  height: 20px; }
+ul.nav {
+  height: 60px; }
 
-.nav-link {
-  font-size: calc(110% + 0.25vw);
-  margin-left: 20px; }
+@media (min-width: 1200px) {
+  .navbar {
+    padding-left: 50px;
+    padding-right: 50px; } }
 
 /*# sourceMappingURL=index.css.map */

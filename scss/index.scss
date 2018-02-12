@@ -45,12 +45,14 @@ h2 {
 	transition: all 0.2s;
 }
 
+// Large devices (desktops, 992px and up)
 @media(min-width: 992px) {
 	h2 {
 		font-size: $extra-large;
 	}
 }
 
+//	Partials
 @import 'landing-page';
 @import 'portfolio-page';
 @import 'about-page';

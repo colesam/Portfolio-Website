@@ -8,8 +8,13 @@ nav {
 	display: none;
 }
 
-ul.nav {
-	height: 60px;
+.nav-link {
+	font-size: $medium;
+	margin-left: 20px;
+}
+
+.navbar-logo {
+	height: 20px;
 }
 
 .navbar-toggler {
@@ -27,11 +32,14 @@ ul.nav {
 	color: 1px solid $orange;
 }
 
-.navbar-logo {
-	height: 20px;
+ul.nav {
+	height: 60px;
 }
 
-.nav-link {
-	font-size: $medium;
-	margin-left: 20px;
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+	.navbar {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
 }
