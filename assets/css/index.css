@@ -52,6 +52,12 @@ h5 {
 @media (min-width: 992px) {
   h2, h3 {
     font-size: calc(200% + 0.25vw); } }
+@media (min-width: 1600px) {
+  .col-hg-8 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%; } }
 .jumbotron.jumbotron-fluid {
   background: #F2F2F2;
   padding-top: 30px;
