@@ -7,7 +7,7 @@
 			</div>
 		</div>
 		<div class="row justify-content-center">
-			<div class="col-12">
+			<div class="col-12 col-lg-8">
 				<p>
 					My name is Sam Cole and I am a senior studying at the University of St. Thomas in St. Paul, Minnesota. 
 					In May 2018, I will graduate with a double-major in Computer Science and German. Web development is something 
@@ -25,40 +25,60 @@
 					Minnesota's wilderness.
 				</p>
 			</div>
-			<div class="col-12 gray-box">
+			<div class="col-12 col-lg-4 gray-box" id="about-buttons">
 				<div class="row justify-content-center">
 					<div class="col-12">
 						<h5>Documents and Links</h5>
 					</div>
-					<div class="col-6">
-						<button class="btn btn-custom form-control">Resume</button>
-						<a class="btn btn-custom dark form-control" href="https://github.com/colesam" target="_blank">
-							<div class="row justify-content-center">
-								<div class="d-none d-md-block col-md-2"><i class="fab fa-github fa-lg"></i></div>
-								<div class="col-12 col-md-5">GitHub</div>
+					<div class="col-12 col-xl-10">
+						<div class="row justify-content-center">
+							<div class="col-6 col-lg-12">
+								<button class="btn btn-custom form-control">Resume</button>
 							</div>
-						</a>
-						<a class="btn btn-custom dark form-control" href="https://www.linkedin.com/in/colesam21" target="_blank">
-							<div class="row justify-content-center">
-								<div class="d-none d-md-block col-md-2"><i class="fab fa-linkedin-in fa-lg"></i></div>
-								<div class="col-12 col-md-5">LinkedIn</div>
+							<div class="col-6 col-lg-12">
+								<button class="btn btn-custom form-control">Portfolio</button>
 							</div>
-						</a>
+						</div>
 					</div>
-					<div class="col-6">
-						<button class="btn btn-custom form-control">Portfolio</button>
-						<a class="btn btn-custom dark form-control" href="https://stackoverflow.com/users/8053821/samuel-cole" target="_blank">
-							<div class="row justify-content-center">
-								<div class="d-none d-md-block col-md-2"><i class="fab fa-stack-overflow fa-lg"></i></div>
-								<div class="col-12 col-md-5">Stack Overflow</div>
+					<div class="col-12 col-xl-10">
+						<div class="row justify-content-center">
+							<div class="col-6 col-lg-12">
+								<a class="btn btn-custom dark form-control" href="https://github.com/colesam" target="_blank">
+									<div class="row justify-content-center">
+										<div class="d-none d-md-block col-md-2"><i class="fab fa-github fa-lg"></i></div>
+										<div class="col-12 col-md-5">GitHub</div>
+									</div>
+								</a>
 							</div>
-						</a>
-						<a class="btn btn-custom dark form-control" href="https://twitter.com/SamuelCole21" target="_blank">
-							<div class="row justify-content-center">
-								<div class="d-none d-md-block col-md-2"><i class="fab fa-twitter fa-lg"></i></div>
-								<div class="col-12 col-md-5">Twitter</div>
+							<div class="col-6 col-lg-12">
+								<a class="btn btn-custom dark form-control" href="https://stackoverflow.com/users/8053821/samuel-cole" target="_blank">
+									<div class="row justify-content-center">
+										<div class="d-none d-md-block col-md-2"><i class="fab fa-stack-overflow fa-lg"></i></div>
+										<div class="col-12 col-md-5">Stack Overflow</div>
+									</div>
+								</a>
 							</div>
-						</a>
+						</div>
+					</div>
+					<div class="col-12 col-xl-10">
+						<div class="row justify-content-center">
+							<div class="col-6 col-lg-12">
+								<a class="btn btn-custom dark form-control" href="https://www.linkedin.com/in/colesam21" target="_blank">
+									<div class="row justify-content-center">
+										<div class="d-none d-md-block col-md-2"><i class="fab fa-linkedin-in fa-lg"></i></div>
+										<div class="col-12 col-md-5">LinkedIn</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-6 col-lg-12">
+								<a class="btn btn-custom dark form-control" href="https://twitter.com/SamuelCole21" target="_blank">
+									<div class="row justify-content-center">
+										<div class="d-none d-md-block col-md-2"><i class="fab fa-twitter fa-lg"></i></div>
+										<div class="col-12 col-md-5">Twitter</div>
+									</div>
+								</a>
+							</div>	
+						</div>
 					</div>
 				</div>
 			</div>
