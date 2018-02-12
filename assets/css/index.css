@@ -52,7 +52,7 @@ h5 {
 @media (min-width: 992px) {
   h2, h3 {
     font-size: calc(200% + 0.25vw); } }
-@media (min-width: 1600px) {
+@media (min-width: 1500px) {
   .col-hg-8 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 66.666667%;

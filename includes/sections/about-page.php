@@ -1,7 +1,7 @@
 <div class="row justify-content-center">
-	<div class="col-10">
+	<div class="col-10 col-hg-8">
 		<div class="row justify-content-center">
-			<div class="col-12 col-md-10">
+			<div class="col-12">
 				<h3 class="ml-25">About Me</h3>
 				<hr>
 			</div>
@@ -30,7 +30,7 @@
 					<div class="col-12">
 						<h5>Documents and Links</h5>
 					</div>
-					<div class="col-12 col-xl-10 col-hg-8">
+					<div class="col-12 col-xl-10">
 						<div class="row justify-content-center">
 							<div class="col-6 col-lg-12">
 								<button class="btn btn-custom form-control">Resume</button>
@@ -40,7 +40,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-12 col-xl-10 col-hg-8">
+					<div class="col-12 col-xl-10">
 						<div class="row justify-content-center">
 							<div class="col-6 col-lg-12">
 								<a class="btn btn-custom dark form-control" href="https://github.com/colesam" target="_blank">
@@ -60,7 +60,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-12 col-xl-10 col-hg-8">
+					<div class="col-12 col-xl-10">
 						<div class="row justify-content-center">
 							<div class="col-6 col-lg-12">
 								<a class="btn btn-custom dark form-control" href="https://www.linkedin.com/in/colesam21" target="_blank">
