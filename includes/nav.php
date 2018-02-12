@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md">
+<nav class="navbar fixed-top navbar-expand-md hidden">
 	<img class="navbar-logo" src="includes/img/cole-logo-simple.svg" alt="Samuel Cole"></img>
 	<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="oi oi-menu" title="menu" aria-hidden="true"></span>

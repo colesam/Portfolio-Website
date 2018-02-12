@@ -1,0 +1,16 @@
+.jumbotron.jumbotron-fluid {
+	background: $light-gray;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.lead {
+	font-size: $small;
+}
+
+#landing-page {
+	background-image: url("../includes/img/landing.jpg");
+	background-size: cover;
+	padding-top: 150px;
+	height: 100vh;
+}

@@ -4,11 +4,12 @@
 
 <?php include "includes/nav.php"?>
 
-<div class="container-fluid">
-    <div id="landing-page">
-        <?php include "includes/sections/landing-page.php"?>
-    </div>
+
+<div id="landing-page">
+    <?php include "includes/sections/landing-page.php"?>
+</div>
     
+<div class="container-fluid">
     <div class="section" id="about-page">
         <?php include "includes/sections/about-page.php"?>
     </div>
