@@ -34,14 +34,14 @@
 						<button class="btn btn-custom form-control">Resume</button>
 						<a class="btn btn-custom dark form-control" href="https://github.com/colesam" target="_blank">
 							<div class="row justify-content-center">
-								<div class="col-2"><i class="fab fa-github fa-lg"></i></div>
-								<div class="col-5">GitHub</div>
+								<div class="d-none d-md-block col-md-2"><i class="fab fa-github fa-lg"></i></div>
+								<div class="col-12 col-md-5">GitHub</div>
 							</div>
 						</a>
 						<a class="btn btn-custom dark form-control" href="https://www.linkedin.com/in/colesam21" target="_blank">
 							<div class="row justify-content-center">
-								<div class="col-2"><i class="fab fa-linkedin-in"></i></div>
-								<div class="col-5">LinkedIn</div>
+								<div class="d-none d-md-block col-md-2"><i class="fab fa-linkedin-in fa-lg"></i></div>
+								<div class="col-12 col-md-5">LinkedIn</div>
 							</div>
 						</a>
 					</div>
@@ -49,14 +49,14 @@
 						<button class="btn btn-custom form-control">Portfolio</button>
 						<a class="btn btn-custom dark form-control" href="https://stackoverflow.com/users/8053821/samuel-cole" target="_blank">
 							<div class="row justify-content-center">
-								<div class="col-2"><i class="fab fa-stack-overflow"></i></div>
-								<div class="col-5">Stack Overflow</div>
+								<div class="d-none d-md-block col-md-2"><i class="fab fa-stack-overflow fa-lg"></i></div>
+								<div class="col-12 col-md-5">Stack Overflow</div>
 							</div>
 						</a>
 						<a class="btn btn-custom dark form-control" href="https://twitter.com/SamuelCole21" target="_blank">
 							<div class="row justify-content-center">
-								<div class="col-2"><i class="fab fa-twitter"></i></div>
-								<div class="col-5">Twitter</div>
+								<div class="d-none d-md-block col-md-2"><i class="fab fa-twitter fa-lg"></i></div>
+								<div class="col-12 col-md-5">Twitter</div>
 							</div>
 						</a>
 					</div>
