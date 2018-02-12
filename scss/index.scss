@@ -1,6 +1,7 @@
 //  COLORS
 $black: 		#262730;
 $blue: 			#1DA0BA;
+$blue-dark:		#18859b;
 $orange: 		#FFAF54;
 $light-gray: 	#F2F2F2;
 $gray: 			#CCCCCC;
@@ -25,20 +26,59 @@ a {
 	}
 }
 
-h2 {
+p {
+	font-size: $small;
+}
+
+h2, h3 {
 	font-size: $large;
+}
+
+h3 {
+	font-weight: 700;
+}
+
+h5 {
+	font-size: $small;
+	font-weight: 700;
+	margin-bottom: 20px;
 }
 
 .btn-custom {
 	background: $blue;
 	border-radius: 0px;
 	color: white;
+	margin-bottom: 10px;
 	transition: all 0.2s;
+	
+	&.dark {
+		background: $blue-dark;
+	}
 	
 	&:hover, &:active, &:focus {
 		background: $orange;
 		color: white;
 	}
+}
+
+.gray-box {
+	background: $light-gray;
+	border: 1px solid $gray;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.ml-25 {
+	margin-left: 25px;
+}
+
+.section {
+	padding-top: 50px;
+}
+
+.title-line {
+	border-bottom: 1px solid $blue;
+	width: 100%;
 }
 
 .transitions {
@@ -47,7 +87,7 @@ h2 {
 
 // Large devices (desktops, 992px and up)
 @media(min-width: 992px) {
-	h2 {
+	h2, h3 {
 		font-size: $extra-large;
 	}
 }

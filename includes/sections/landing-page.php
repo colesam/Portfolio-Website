@@ -1,6 +1,6 @@
 <div class="container-fluid">
 	<div class="row justify-content-center">
-		<div class="col-12 col-md-8 col-lg-6 jumbotron jumbotron-fluid">
+		<div class="col-12 col-md-8 col-lg-6 gray-box">
 			<div class="row justify-content-center">
 				<div class="col-8 col-md-6 col-lg-8">
 					<h1><img class="img-fluid" src="includes/img/cole-logo-simple.svg"></img></h1>

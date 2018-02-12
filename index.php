@@ -24,9 +24,10 @@
 </div>
 
 <!-- Javascript -->
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/index.js"></script>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/fontawesome-all.min.js"></script>
+<script src="assets/js/index.js"></script>
 
 <!-- body end -->
     
