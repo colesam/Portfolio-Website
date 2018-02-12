@@ -106,6 +106,7 @@ nav {
 
 .nav-link {
   font-size: calc(110% + 0.25vw);
+  font-weight: 500;
   margin-left: 20px; }
 
 .navbar-logo {
