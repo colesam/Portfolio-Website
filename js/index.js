@@ -54,7 +54,7 @@ $(window).on('load', function() {
     
     //  POST REQUESTS
     
-    //  if the page is accessed with a post request
+    //  if the page is accessed with a post request (reference mailer.php for initialization of $_POST)
     if(typeof $_POST['submit'] !== 'undefined') {
         
         //  snap the window down to the contact section

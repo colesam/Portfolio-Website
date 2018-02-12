@@ -64,4 +64,8 @@ ul.nav {
 .navbar-logo {
   height: 20px; }
 
+.nav-link {
+  font-size: calc(110% + 0.25vw);
+  margin-left: 20px; }
+
 /*# sourceMappingURL=index.css.map */
