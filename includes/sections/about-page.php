@@ -33,10 +33,10 @@
 					<div class="col-12 col-xl-10">
 						<div class="row justify-content-center">
 							<div class="col-6 col-lg-12">
-								<button class="btn btn-custom form-control">Resume</button>
+								<a class="btn btn-custom form-control" href="includes/img/resume.pdf" target="_blank">Resume</a>
 							</div>
 							<div class="col-6 col-lg-12">
-								<button class="btn btn-custom form-control">Portfolio</button>
+								<button class="btn btn-custom form-control portfolio-nav">Portfolio</button>
 							</div>
 						</div>
 					</div>

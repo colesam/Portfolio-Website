@@ -2,7 +2,8 @@ a {
   color: #262730;
   transition: all 0.2s; }
   a:hover {
-    color: #FFAF54; }
+    color: #FFAF54 !important;
+    cursor: pointer; }
 
 p {
   font-size: calc(90% + 0.25vw); }

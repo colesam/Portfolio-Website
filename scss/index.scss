@@ -20,7 +20,8 @@ a {
 	transition: all 0.2s;
 	
 	&:hover {
-		color: $orange;
+		color: $orange !important;
+		cursor: pointer;
 	}
 }
 
