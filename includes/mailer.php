@@ -41,7 +41,7 @@ if(isset($_POST['submit'])) {
             $header .= 'From: ' . $name . '<' . $email . '>' . '\r\n';
             
             //  send email
-            if(mail($toEmail, $subject, $body, $headers)) {
+            if(mail($toEmail, $subject, $body, $header)) {
                 
                 //  email sent successfully
                 $msg        = 'Your message has been sent successfully.';
