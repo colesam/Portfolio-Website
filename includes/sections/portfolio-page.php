@@ -7,7 +7,7 @@
 			</div>
 		</div>
 		<div class="row justify-content-center" id="portfolio-items">
-			<div class="col-12 col-md-10 col-lg-12 col-xl-11">
+			<div class="col-12 col-md-10 col-lg-12">
 				<div class="row justify-content-center portfolio-item">
 					<div class="col-12 col-lg-5">
 						<img class="img-fluid" src="includes/img/php-blog.jpg">
