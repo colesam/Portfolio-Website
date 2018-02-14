@@ -50,7 +50,8 @@ if(isset($_POST['submit'])) {
             } else {
                 
                 //  email failed
-                printr(error_get_last()['message']);
+                $msg        = 'An error occured with the email server. Please try again later.';
+                $msgType    = 'error';
                 
             }
             

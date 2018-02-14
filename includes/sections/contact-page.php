@@ -9,7 +9,7 @@
 		<div class="row justify-content-center">
 			<div class="col-12 col-lg-10 col-hg-8">
 				<!-- FORM MESSAGE -->
-				<?php if($msgType=="success" && strlen($msg) > 0) { ?>
+				<?php if($msgType == "success" && strlen($msg) > 0) { ?>
 			
 					<!-- echo success message -->
 					<div class="col-12 alert alert-success">
@@ -34,21 +34,21 @@
 							<div class="row">
 								<div class="col-12 col-lg-6 form-group">
 									<label for="name"> Your Name</label>
-									<input type="text" class="form-control" name="name" value="<?php echo isset($_POST['name']) ? $name : ''; ?>">
+									<input type="text" class="form-control" name="name" value="<?php echo isset($_POST['name']) && $msgType != 'success' ? $name : ''; ?>">
 								</div>
 								<div class="d-hidden d-lg-block col-lg-6">
 									<!-- offset col -->
 								</div>
 								<div class="col-12 col-lg-6 form-group">
 									<label for="email"> Email Address</label>
-									<input type="email" class="form-control" name="email" value="<?php echo isset($_POST['email']) ? $email : ''; ?>">
+									<input type="email" class="form-control" name="email" value="<?php echo isset($_POST['email']) && $msgType != 'success' ? $email : ''; ?>">
 								</div>
 								<div class="d-hidden d-lg-block col-lg-6">
 									<!-- offset col -->
 								</div>
 								<div class="col-12 form-group">
 									<label for="message"> Message</label>
-									<textarea class="form-control" rows="5" name="message"><?php echo isset($_POST['message']) ? $message : ''; ?></textarea>
+									<textarea class="form-control" rows="5" name="message"><?php echo isset($_POST['message']) && $msgType != 'success' ? $message : ''; ?></textarea>
 								</div>
 								<div class="col-12">
 									<button type="submit" name="submit" class="btn btn-custom form-control"> Send Message</button>
