@@ -21,8 +21,7 @@
 				</p>
 				<p>
 					I also make it a point to be a multi-dimensional individual. Dedicating my time to activities beyond the web inspires me 
-					and boosts my creativity. I enjoy a many hobbies such as playing piano and guitar, or going backpacking and canoeing in 
-					Minnesota's wilderness.
+					and boosts my creativity. I enjoy many hobbies such as playing piano and guitar, and going backpacking in Minnesota's wilderness.
 				</p>
 			</div>
 			<div class="col-12 col-lg-4 gray-box" id="about-buttons">
