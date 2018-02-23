@@ -38,6 +38,33 @@
 				
 				<div class="row justify-content-center portfolio-item">
 					<div class="col-12 col-lg-5">
+						<img class="img-fluid" src="includes/img/number-game.jpg">
+					</div>
+					<div class="col-12 col-lg-7">
+						<h5 class="text-center">Number Guessing Game</h5>
+	                    <p>
+							 This was an in-class practice assignment from my CISC-310 Web Development course. The user guesses a number between 1 and 100. 
+							 If the number is correct, it displays a success page. If the number is incorrect, it will add the number to your list of previous 
+							 guesses and update the GUI displaying a range of that the secret number could still be in. 
+						</p> 
+						<p>To create this I used:</p>
+						<ul>
+							<li>HTML5</li>
+							<li>CSS</li>
+							<li>JavaScript</li>
+						</ul>
+						<div class="row justify-content-center">
+							<div class="col-12">
+								<a class="btn btn-custom form-control" href="https://github.com/colesam/Number-Guessing-Game" target="_blank">View Files on GitHub</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<hr>
+				
+				<div class="row justify-content-center portfolio-item">
+					<div class="col-12 col-lg-5">
 						<img class="img-fluid" src="includes/img/chess-club-logo.jpg">
 					</div>
 					<div class="col-12 col-lg-7">
@@ -84,7 +111,7 @@
 							</div>
 						</div>
 					</div>
-				</div>				
+				</div>
 			</div>
 		</div>
 	</div>
