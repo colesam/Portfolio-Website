@@ -57,7 +57,7 @@
 						</ul>
 						<div class="row justify-content-center">
 							<div class="col-12">
-								<a class="btn btn-custom form-control" href="https://github.com/colesam/Number-Guessing-Game" target="_blank">View Files on GitHub</a>
+								<a class="btn btn-custom form-control" href="https://github.com/colesam/St-Thomas-Web-Accessibility-Site" target="_blank">View Files on GitHub</a>
 							</div>
 						</div>
 					</div>
