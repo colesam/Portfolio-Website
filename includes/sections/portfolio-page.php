@@ -10,6 +10,33 @@
 			<div class="col-12 col-md-10 col-lg-12">
 				<div class="row justify-content-center portfolio-item">
 					<div class="col-12 col-lg-5">
+						<img class="img-fluid" src="includes/img/web-accessibility.jpg">
+					</div>
+					<div class="col-12 col-lg-7">
+						<h5 class="text-center">Web Accessibility Website</h5>
+	                    <p>
+							My current task at UST Web Services is to create a website that explains web accessibility to different members of our University. 
+							Within this project, the biggest priority for me right now is to create a stunning landing page that draws visitors in. The image 
+							to the left is a preview of a high fidelity prototype I created for the project.
+						</p> 
+						<p>To create this I am using:</p>
+						<ul>
+							<li>HTML5 / CSS</li>
+							<li>Foundations CSS Framework</li>
+							<li>Adobe Illustrator</li>
+						</ul>
+						<div class="row justify-content-center">
+							<div class="col-12">
+								<a class="btn btn-custom form-control" href="https://github.com/colesam/St-Thomas-Web-Accessibility-Site" target="_blank">View Files on GitHub</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<hr>
+				
+				<div class="row justify-content-center portfolio-item">
+					<div class="col-12 col-lg-5">
 						<img class="img-fluid" src="includes/img/php-blog.jpg">
 					</div>
 					<div class="col-12 col-lg-7">
@@ -38,26 +65,24 @@
 				
 				<div class="row justify-content-center portfolio-item">
 					<div class="col-12 col-lg-5">
-						<img class="img-fluid" src="includes/img/web-accessibility.jpg">
+						<img class="img-fluid" src="includes/img/productivity.jpg">
 					</div>
 					<div class="col-12 col-lg-7">
-						<h5 class="text-center">Web Accessibility Website</h5>
+						<h5 class="text-center">Productivity Website</h5>
 	                    <p>
-							My current task at UST Web Services is to create a website that explains web accessibility to different members of our University. 
-							Within this project, the biggest priority for me right now is to create a stunning landing page that draws visitors in. The image 
-							to the left shows three banners I created according to University branding guidelines that will accompany the three reasons web 
-							accessibility is important: moral duty, quality assurance, and legal responsibility.
+							 This was my first assignment in my CISC-310 Web Development course. The site has two pages, one for keeping track of tasks
+							 and another for viewing inspirational images. The site was not allowed to be built using any frameworks and was not required
+							 to be responsive to screen size. The full list of specifications can be found on GitHub.
 						</p> 
-						<p>To create this I am using:</p>
+						<p>To create this I used:</p>
 						<ul>
 							<li>HTML5</li>
 							<li>CSS</li>
-							<li>Foundations CSS Framework</li>
-							<li>Adobe Illustrator</li>
+							<li>JavaScript</li>
 						</ul>
 						<div class="row justify-content-center">
 							<div class="col-12">
-								<a class="btn btn-custom form-control" href="https://github.com/colesam/St-Thomas-Web-Accessibility-Site" target="_blank">View Files on GitHub</a>
+								<a class="btn btn-custom form-control" href="https://github.com/colesam/Productivity-Website" target="_blank">View Files on GitHub</a>
 							</div>
 						</div>
 					</div>
@@ -84,33 +109,6 @@
 						<div class="row justify-content-center">
 							<div class="col-12">
 								<a class="btn btn-custom form-control" href="https://github.com/colesam/Chess-Club-Logo" target="_blank">View Files on GitHub</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				
-				<hr>
-				
-				<div class="row justify-content-center portfolio-item">
-					<div class="col-12 col-lg-5">
-						<img class="img-fluid" src="includes/img/number-game.jpg">
-					</div>
-					<div class="col-12 col-lg-7">
-						<h5 class="text-center">Number Guessing Game</h5>
-	                    <p>
-							 This was an in-class practice assignment from my CISC-310 Web Development course. The user guesses a number between 1 and 100. 
-							 If the number is correct, it displays a success page. If the number is incorrect, it will add the number to your list of previous 
-							 guesses and update the GUI displaying a range of that the secret number could still be in. 
-						</p> 
-						<p>To create this I used:</p>
-						<ul>
-							<li>HTML5</li>
-							<li>CSS</li>
-							<li>JavaScript</li>
-						</ul>
-						<div class="row justify-content-center">
-							<div class="col-12">
-								<a class="btn btn-custom form-control" href="https://github.com/colesam/Number-Guessing-Game" target="_blank">View Files on GitHub</a>
 							</div>
 						</div>
 					</div>
