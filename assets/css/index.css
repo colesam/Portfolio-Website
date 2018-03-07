@@ -20,6 +20,8 @@ h2 {
   font-size: calc(110% + 0.25vw); }
 
 h3 {
+  letter-spacing: 2px;
+  font-family: 'Playfair Display', serif;
   font-size: calc(135% + 0.25vw); }
 
 h3 {
@@ -62,6 +64,9 @@ h4, h5 {
 .transitions {
   transition: all 0.2s; }
 
+@media (min-width: 1200px) {
+  h3 {
+    font-size: calc(200% + 0.25vw); } }
 @media (min-width: 1500px) {
   .col-hg-6 {
     -webkit-box-flex: 0;
@@ -111,9 +116,9 @@ h4, h5 {
 
   .landing-graphic-lg {
     width: 45%; } }
-@media (min-width: 1200px) {
-  img[data-src-1200px] {
-    content: attr(data-src-1260px, url); } }
+@media (min-width: 1500px) {
+  h1 {
+    font-size: calc(500% + 0.25vw); } }
 .portfolio-item img {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   margin-bottom: 20px; }

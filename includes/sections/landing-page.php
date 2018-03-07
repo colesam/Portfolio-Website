@@ -11,9 +11,7 @@
 			</div>
 		</div>
 		<div class="landing-graphic landing-graphic-lg d-none d-md-flex flex-column justify-content-center align-items-center">
-			<img	src="includes/img/landing-display-sm.jpg" 
-					data-src-1200px="includes/img/landing-display-lg.jpg"
-					class="img-fluid"></img>
+			<img	src="includes/img/landing-display-sm.jpg" class="img-fluid"></img>
 		</div>
 	</div>
 </div>

@@ -66,9 +66,9 @@
 	}
 }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-	img[data-src-1200px] {
-		content: attr(data-src-1260px, url);
+// Huge devices (custom col type, 1500 px and up)
+@media(min-width: 1500px) {
+	h1 {
+		font-size: calc(500% + 0.25vw);
 	}
 }

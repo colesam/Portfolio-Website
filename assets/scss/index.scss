@@ -45,6 +45,8 @@ h2 {
 }
 
 h3 {
+	letter-spacing: 2px;
+	font-family: 'Playfair Display', serif;
 	font-size: $large;
 }
 
@@ -103,6 +105,13 @@ h4, h5 {
 // Large devices (desktops, 992px and up)
 @media(min-width: 992px) {
 	
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+	h3 {
+		font-size: $extra-large;
+	}
 }
 
 // Huge devices (custom col type, 1500 px and up)

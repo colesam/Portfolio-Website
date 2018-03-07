@@ -43,6 +43,18 @@ Section.prototype.scrollTo = function() {
 }
 
 
+$(document).ready(function() {
+    
+    //  RESIZE LANDING IMAGE    
+    if($(window).width() > 1200) {
+        
+        $(".landing-graphic-lg img").attr("src", "includes/img/landing-display-lg.jpg")
+        
+    }
+
+});
+
+
 $(window).on('load', function() {
 
     //  INITIALIZE SECTION VARIABLES
@@ -83,11 +95,25 @@ $(window).on('load', function() {
         
         landingPage.scrollTo();
         
+        if($(".navbar-collapse").hasClass("show")) {
+            
+            $(".navbar-toggler").addClass("collapsed");
+            $(".navbar-collapse").removeClass("show");
+            
+        }
+        
     });
     
     $(aboutPage.nav).click(function() {
         
         aboutPage.scrollTo();
+        
+        if($(".navbar-collapse").hasClass("show")) {
+            
+            $(".navbar-toggler").addClass("collapsed");
+            $(".navbar-collapse").removeClass("show");
+            
+        }
         
     });
     
@@ -95,11 +121,25 @@ $(window).on('load', function() {
         
         portfolioPage.scrollTo();
         
+        if($(".navbar-collapse").hasClass("show")) {
+            
+            $(".navbar-toggler").addClass("collapsed");
+            $(".navbar-collapse").removeClass("show");
+            
+        }
+        
     });
     
     $(contactPage.nav).click(function() {
         
         contactPage.scrollTo();
+        
+        if($(".navbar-collapse").hasClass("show")) {
+            
+            $(".navbar-toggler").addClass("collapsed");
+            $(".navbar-collapse").removeClass("show");
+            
+        }
         
     });
     
