@@ -153,7 +153,9 @@ nav {
   margin-left: 20px; }
 
 .navbar-logo {
-  height: 20px; }
+  font-family: 'Playfair Display', serif;
+  font-size: calc(135% + 0.25vw);
+  margin: 0; }
 
 .navbar-toggler {
   border: 1px solid #FFAF54;

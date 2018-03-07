@@ -38,7 +38,7 @@ Section.prototype.contains = function(position) {
 Section.prototype.scrollTo = function() {
     
     //  scroll to the section leaving room for the navbar at the top
-    $('html,body').animate({scrollTop: this.startPos - navbarHeight + 10}, 500);
+    $('html,body').animate({scrollTop: this.startPos - navbarHeight + 50}, 500);
     
 }
 
@@ -67,7 +67,7 @@ $(window).on('load', function() {
     //  POST REQUESTS
     
     //  if the page is accessed with a post request (reference mailer.php for initialization of $_POST)
-    if(typeof $_POST['submit'] !== 'undefined') {
+    if(typeof($_POST['submit']) !== 'undefined') {
         
         //  snap the window down to the contact section
         $(window).scrollTop(contactPage.startPos);
