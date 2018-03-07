@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="assets/css/index.css">
 
         <!-- google fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Playfair+Display:700" rel="stylesheet"> 
 
         <!-- meta data -->
         <meta name="viewport" content="width=device-width, initial-scale=1">

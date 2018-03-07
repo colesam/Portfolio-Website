@@ -1,23 +1,12 @@
 <div class="container-fluid">
-	<div class="row justify-content-center">
-		<div class="col-12 col-md-8 col-lg-6 gray-box">
-			<div class="row justify-content-center">
-				<div class="col-8 col-md-6 col-lg-8">
-					<h1><img class="img-fluid" src="includes/img/cole-logo-simple.svg"></img></h1>
-					<h2 class="text-center">Web Developer</h2>
-					<hr>
-				</div>
-			</div>
-			<div class="row justify-content-center">
-				<div class="col-11 col-md-8">
-					<p class="lead text-center">Hello and welcome to my portfolio website. Click the button below to get started.</p>
-				</div>
-			</div>
-			<div class="row justify-content-center">
-				<div class="col-4 col-sm-3">
-					<button class="btn btn-custom form-control about-nav">Begin</button>
-				</div>
-			</div>
+	<div class="row d-flex flex-row justify-content-between align-items-stretch">
+		<div class="landing-header d-flex flex-column justify-content-center">
+			<h1>SAMUEL COLE</h1>
+			<h2>Web Development and Design</h2>
+			<button class="btn btn-custom about-nav">Get Started</button>
+		</div>
+		<div class="landing-graphic">
+			test
 		</div>
 	</div>
 </div>
