@@ -16,7 +16,7 @@
             setActive:  sets this section of the website as the one the user is looking at
 */
 
-var navbarHeight = $('.navbar').height() - 10;  //  height of navbar plus some offset
+var navbarHeight = $('.navbar').height();  //  height of navbar plus some offset
     
 function Section(name) {
     
@@ -38,7 +38,7 @@ Section.prototype.contains = function(position) {
 Section.prototype.scrollTo = function() {
     
     //  scroll to the section leaving room for the navbar at the top
-    $('html,body').animate({scrollTop: this.startPos - navbarHeight}, 500);
+    $('html,body').animate({scrollTop: this.startPos - navbarHeight + 10}, 500);
     
 }
 
@@ -67,7 +67,7 @@ $(window).on('load', function() {
     $(window).scroll(function() {
         
         //  only display navbar outside of landing page
-        if(landingPage.contains($(document).scrollTop())) {
+        if($(document).scrollTop() <= aboutPage.startPos - navbarHeight) {
 
             $('.navbar').addClass('hidden');
             
