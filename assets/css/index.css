@@ -12,8 +12,9 @@ p {
   font-size: calc(90% + 0.25vw); }
 
 h1 {
-  font-size: calc(400% + 0.25vw);
-  font-family: 'Playfair Display', serif; }
+  font-size: calc(200% + 0.25vw);
+  font-family: 'Playfair Display', serif;
+  margin-top: 25px; }
 
 h2 {
   font-size: calc(110% + 0.25vw); }
@@ -76,16 +77,43 @@ h4, h5 {
 #landing-page .row {
   height: 100vh; }
 #landing-page .btn-custom {
-  margin-top: 50px;
-  width: 50%; }
-
-.landing-header {
-  padding-left: 5%; }
+  margin-top: 25px; }
 
 .landing-graphic {
-  background: #1DA0BA;
+  background: #1DA0BA; }
+
+.landing-graphic-sm {
+  height: 50vh; }
+
+.landing-graphic-lg {
   width: 40%; }
 
+@media (min-width: 500px) {
+  .landing-graphic-sm img {
+    width: 60%; } }
+@media (max-device-width: 640px) and (orientation: landscape) {
+  .landing-graphic-sm {
+    display: none !important; } }
+@media (min-width: 576px) {
+  .landing-graphic-sm {
+    height: 60vh; }
+    .landing-graphic-sm img {
+      width: 70%; } }
+@media (min-width: 768px) {
+  h1 {
+    font-size: calc(350% + 0.25vw); }
+
+  .landing-header {
+    padding-left: 2%; } }
+@media (min-width: 992px) {
+  .landing-header {
+    padding-left: 5%; }
+
+  .landing-graphic-lg {
+    width: 45%; } }
+@media (min-width: 1200px) {
+  img[data-src-1200px] {
+    content: attr(data-src-1260px, url); } }
 .portfolio-item img {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   margin-bottom: 20px; }

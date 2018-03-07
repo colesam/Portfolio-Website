@@ -4,21 +4,71 @@
 	}
 	
 	.btn-custom {
-		margin-top: 50px;
-		width: 50%;
+		margin-top: 25px;
 	}
-}
-
-.landing-header {
-	padding-left: 5%;
 }
 
 .landing-graphic {
 	background: $blue;
+}
+
+.landing-graphic-sm {
+	height: 50vh;
+}
+
+.landing-graphic-lg {
 	width: 40%;
+}
+
+@media (min-width: 500px) {
+	.landing-graphic-sm img {
+		width: 60%;
+	}
+}
+
+//	do not display on orientation smartphones
+@media (max-device-width: 640px) and (orientation: landscape) {
+	.landing-graphic-sm {
+		display: none !important;
+	}
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+	.landing-graphic-sm {
+		height: 60vh;
+		
+		img {
+			width: 70%;
+		}
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+	h1 {
+		font-size: $XXL;
+	}
+	
+	.landing-header {
+		padding-left: 2%;
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	.landing-header {
+		padding-left: 5%;
+	}
+	
+	.landing-graphic-lg {
+		width: 45%;
+	}
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-
+	img[data-src-1200px] {
+		content: attr(data-src-1260px, url);
+	}
 }
