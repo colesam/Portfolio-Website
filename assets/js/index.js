@@ -37,8 +37,12 @@ Section.prototype.contains = function(position) {
 
 Section.prototype.scrollTo = function() {
     
+    var offset = 25;
+    
+    if($(window).width() > 1200) { offset = 50; }
+    
     //  scroll to the section leaving room for the navbar at the top
-    $('html,body').animate({scrollTop: this.startPos - navbarHeight + 50}, 500);
+    $('html,body').animate({scrollTop: this.startPos - navbarHeight + offset}, 500);
     
 }
 
