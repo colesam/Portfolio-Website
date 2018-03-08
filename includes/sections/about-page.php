@@ -11,7 +11,7 @@
 				<p>
 					My name is Sam Cole and I am a senior studying at the University of St. Thomas in St. Paul, Minnesota. 
 					In May 2018, I will graduate with a double-major in Computer Science and German. Web development is something 
-					that I have been pursuing alongside my coursework that I will be turning into a career after graduation.
+					I have been pursuing alongside my coursework that I will be turning into a career after graduation.
 				</p>
 				<p>
 					I love web development because it is deeply creative work that users from all over the planet will see. I believe 
