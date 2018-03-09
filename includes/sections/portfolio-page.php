@@ -10,7 +10,7 @@
 			<div class="col-12 col-md-10 col-lg-12">
 				<div class="row justify-content-center portfolio-item">
 					<div class="col-12 col-lg-5">
-						<img class="img-fluid" src="includes/img/web-accessibility.jpg">
+						<img class="img-fluid" src="includes/img/web-accessibility.jpg" alt="A preview of a high fidelity prototype I made for the St. Thomas Web Accessibility page. Looks like a screenshot of a website.">
 					</div>
 					<div class="col-12 col-lg-7">
 						<h5 class="text-center">Web Accessibility Website</h5>
@@ -37,7 +37,7 @@
 				
 				<div class="row justify-content-center portfolio-item">
 					<div class="col-12 col-lg-5">
-						<img class="img-fluid" src="includes/img/php-blog.jpg">
+						<img class="img-fluid" src="includes/img/php-blog.jpg" alt="A screenshot that shows the homepage of a blog website.">
 					</div>
 					<div class="col-12 col-lg-7">
 						<h5 class="text-center">PHP Laravel Blog CMS</h5>
@@ -65,7 +65,7 @@
 				
 				<div class="row justify-content-center portfolio-item">
 					<div class="col-12 col-lg-5">
-						<img class="img-fluid" src="includes/img/productivity.jpg">
+						<img class="img-fluid" src="includes/img/productivity.jpg" alt="Two screenshots that show the two pages of the productivity website. One shows a task manager, the other shows a table of images.">
 					</div>
 					<div class="col-12 col-lg-7">
 						<h5 class="text-center">Productivity Website</h5>
@@ -92,7 +92,7 @@
 				
 				<div class="row justify-content-center portfolio-item">
 					<div class="col-12 col-lg-5">
-						<img class="img-fluid" src="includes/img/chess-club-logo.jpg">
+						<img class="img-fluid" src="includes/img/chess-club-logo.jpg" alt="A logo that shows a King chess piece and says 'University of St. Thomas Chess Club'.">
 					</div>
 					<div class="col-12 col-lg-7">
 						<h5 class="text-center">Chess Club Logo</h5>
@@ -118,7 +118,7 @@
 				
 				<div class="row justify-content-center portfolio-item">
 					<div class="col-12 col-lg-5">
-						<img class="img-fluid" src="includes/img/wireframes.jpg">
+						<img class="img-fluid" src="includes/img/wireframes.jpg" alt="A screenshot of a website wireframe.">
 					</div>
 					<div class="col-12 col-lg-7">
 						<h5 class="text-center">UST Newsroom Wireframes</h5>
