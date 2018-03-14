@@ -171,6 +171,9 @@ nav {
 ul.nav {
   height: 60px; }
 
+@media (min-width: 992px) {
+  .navbar-logo {
+    font-size: calc(200% + 0.25vw); } }
 @media (min-width: 1200px) {
   .navbar {
     padding-left: 50px;
