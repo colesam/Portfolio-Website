@@ -1,25 +1,25 @@
-<?php include "includes/header.php"; ?>
-<?php include "includes/mailer.php"; ?>
+<?php include "includes/header.php" ?>
+<?php include "includes/mailer.php" ?>
 <!-- body start -->
 
 <?php include "includes/nav.php"?>
 
 
 <div id="landing-page">
-    <?php include "includes/sections/landing-page.php"?>
+    <?php include "includes/sections/landing-page.php" ?>
 </div>
     
 <div class="container-fluid">
     <div class="section" id="about-page">
-        <?php include "includes/sections/about-page.php"?>
+        <?php include "includes/sections/about-page.php" ?>
     </div>
     
     <div class="section full-page" id="portfolio-page">
-        <?php include "includes/sections/portfolio-page.php"?>
+        <?php include "includes/sections/portfolio-page.php" ?>
     </div>
     
     <div class="section" id="contact-page">
-        <?php include "includes/sections/contact-page.php"?>
+        <?php include "includes/sections/contact-page.php" ?>
     </div>
 </div>
 
@@ -31,4 +31,4 @@
 
 <!-- body end -->
     
-<?php include "includes/footer.php"; ?>
+<?php include "includes/footer.php" ?>
