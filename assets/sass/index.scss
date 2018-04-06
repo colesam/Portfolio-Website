@@ -1,0 +1,10 @@
+//	SCSS Helper Files
+@import 'variables';
+@import 'sitewide';
+
+//	Sections of index.php
+@import 'index/landing-page';
+@import 'index/portfolio-page';
+@import 'index/about-page';
+@import 'index/contact-page';
+@import 'index/nav';
