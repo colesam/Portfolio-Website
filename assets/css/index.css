@@ -5,15 +5,22 @@ a {
     color: #FFAF54 !important;
     cursor: pointer; }
 
+a.link {
+  color: #18859b;
+  transition: none; }
+  a.link:hover {
+    color: #FFAF54;
+    text-decoration: underline; }
+
 body {
-  font-family: 'Noto Sans', sans-serif; }
+  font-family: "Noto Sans", sans-serif; }
 
 p {
-  font-size: calc(90% + 0.25vw); }
+  font-size: calc(80%  + 0.25vw); }
 
 h1 {
   font-size: calc(200% + 0.25vw);
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   margin-top: 25px; }
 
 h2 {
@@ -21,7 +28,7 @@ h2 {
 
 h3 {
   letter-spacing: 2px;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: calc(135% + 0.25vw); }
 
 h3 {
@@ -39,16 +46,20 @@ h4, h5 {
   margin-bottom: 10px;
   transition: all 0.2s; }
   .btn-custom.dark {
-    background: #18859b; }
+    background: #18859b;
+    color: white !important; }
   .btn-custom:hover, .btn-custom:active, .btn-custom:focus {
     background: #FFAF54;
-    color: white; }
+    color: white !important; }
 
 .gray-box {
   background: #F2F2F2;
   border: 1px solid #CCCCCC;
   padding-top: 10px;
   padding-bottom: 10px; }
+
+.mb-25 {
+  margin-bottom: 25px; }
 
 .ml-25 {
   margin-left: 25px; }
@@ -64,6 +75,9 @@ h4, h5 {
 .transitions {
   transition: all 0.2s; }
 
+@media (min-width: 768px) {
+  h1 {
+    font-size: calc(350% + 0.25vw); } }
 @media (min-width: 1200px) {
   h3 {
     font-size: calc(200% + 0.25vw); } }
@@ -105,9 +119,6 @@ h4, h5 {
     .landing-graphic-sm img {
       width: 70%; } }
 @media (min-width: 768px) {
-  h1 {
-    font-size: calc(350% + 0.25vw); }
-
   .landing-header {
     padding-left: 2%; } }
 @media (min-width: 992px) {
@@ -128,16 +139,10 @@ h4, h5 {
   margin-bottom: 20px; }
 
 .technologies-used span {
-  font-size: calc(60% + 0.25vw);
+  font-size: calc(60%  + 0.25vw);
   font-weight: bold;
   margin-left: 10px;
   margin-right: 10px; }
-
-a.link {
-  color: #1DA0BA; }
-  a.link:hover {
-    color: #FFAF54;
-    text-decoration: underline; }
 
 a.btn-custom {
   color: white !important; }
