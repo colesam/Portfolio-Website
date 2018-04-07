@@ -1,0 +1,18 @@
+.portfolio-item {
+	img {
+		box-shadow: $box-shadow;
+		margin-bottom: 20px;
+	}
+}
+
+.technologies-used {
+	color: $gray-dark;
+	margin-bottom: 20px;
+}
+
+.technologies-used span {
+	font-size: $xxs;
+	font-weight: bold;
+	margin-left: 10px;
+	margin-right: 10px;
+}

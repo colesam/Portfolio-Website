@@ -28,7 +28,7 @@ h3 {
   font-weight: 700; }
 
 h4, h5 {
-  font-size: calc(90% + 0.25vw);
+  font-size: calc(110% + 0.25vw);
   font-weight: 700;
   margin-bottom: 20px; }
 
@@ -122,6 +122,16 @@ h4, h5 {
 .portfolio-item img {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   margin-bottom: 20px; }
+
+.technologies-used {
+  color: #444444;
+  margin-bottom: 20px; }
+
+.technologies-used span {
+  font-size: calc(60% + 0.25vw);
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px; }
 
 a.link {
   color: #1DA0BA; }

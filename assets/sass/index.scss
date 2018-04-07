@@ -3,8 +3,8 @@
 @import 'sitewide';
 
 //	Sections of index.php
-@import 'index/landing-page';
-@import 'index/portfolio-page';
-@import 'index/about-page';
-@import 'index/contact-page';
-@import 'index/nav';
+@import 'index-partials/landing-page';
+@import 'index-partials/portfolio-page';
+@import 'index-partials/about-page';
+@import 'index-partials/contact-page';
+@import 'index-partials/nav';

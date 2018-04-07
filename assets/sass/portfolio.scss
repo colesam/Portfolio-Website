@@ -1,0 +1,63 @@
+//	SCSS Helper Files
+@import 'variables';
+@import 'sitewide';
+
+//	Portfolio CSS
+body {
+	background: $light-gray;
+}
+
+.container {
+	background: white;
+	box-shadow: $box-shadow;
+}
+
+.mb-title {
+	//	match bootstrap p element 1rem margin bottom plus some
+	margin-bottom: 1.05rem;
+}
+
+h4 {
+	font-size: $small;
+	font-weight: bold;
+	margin: 0;
+}
+
+li {
+	font-size: $small;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px dashed $gray;
+}
+
+li.no-border {
+	border-bottom: none;
+}
+
+ul {
+	margin: 0;
+	padding-left: 0;
+	list-style-type: none;
+}
+
+.code {
+	background: $gray;
+	//font-size: $small;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.video {
+	width: 100%;
+	height: 0;
+	position: relative;
+	
+	// set the "height" to the correct percentage of parent div width to maintain aspect ratio
+	padding-bottom: 56.25%;
+}
+
+.video iframe {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}

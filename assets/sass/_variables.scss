@@ -3,16 +3,21 @@ $black: 		#262730;
 $blue: 			#1DA0BA;
 $blue-dark:		#18859b;
 $orange: 		#FFAF54;
+$gray-dark:		#444444;
 $gray: 			#CCCCCC;
 $light-gray: 	#F2F2F2;
 
 
-//	FONT SIZES
+//	Font
+$serif:			'Playfair Display', serif;
+$sans-serif:	'Noto Sans', sans-serif;
+
 $XXL:			calc(350% + 0.25vw);
 $extra-large: 	calc(200% + 0.25vw);
 $large: 		calc(135% + 0.25vw);
 $medium:		calc(110% + 0.25vw);
 $small: 		calc(90% + 0.25vw);
+$xxs:			calc(60% + 0.25vw);
 
 
 //  Other

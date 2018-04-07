@@ -4,20 +4,20 @@
 	</div>
 	<div class="col-12 col-lg-7">
 		<h5 class="text-center">Web Accessibility Website</h5>
+		<div class="technologies-used d-flex justify-content-center flex-wrap">
+			<span>HTML5</span>
+			<span>CSS3</span>
+			<span>FOUNDATIONS</span>
+			<span>ADOBE ILLUSTRATOR + EXPERIENCE DESIGN</span>
+		</div>
         <p>
 			My current task at UST Web Services is to create a website that explains web accessibility to different members of our University. 
 			Within this project, the biggest priority for me right now is to create a stunning landing page that draws visitors in. The image to 
 			the left is a preview of a high fidelity prototype I created for the project. 
 		</p> 
-		<p>To create this I used:</p>
-		<ul>
-			<li>HTML5 / CSS</li>
-			<li>Foundations CSS Framework</li>
-			<li>Adobe Illustrator and Experience Design</li>
-		</ul>
 		<div class="row justify-content-center">
 			<div class="col-12">
-				<a class="btn btn-custom form-control" href="https://github.com/colesam/St-Thomas-Web-Accessibility-Site" target="_blank">View Files on GitHub</a>
+				<a class="btn btn-custom dark form-control" href="https://github.com/colesam/St-Thomas-Web-Accessibility-Site" target="_blank">View Files on GitHub</a>
 			</div>
 		</div>
 	</div>

@@ -9,8 +9,18 @@ a {
 	}
 }
 
+a.link {
+	color: $blue-dark;
+	transition: none;
+	
+	&:hover {
+		color: $orange;
+		text-decoration: underline;
+	}
+}
+
 body {
-	font-family: 'Noto Sans', sans-serif;
+	font-family: $sans-serif;
 }
 
 p {
@@ -19,7 +29,7 @@ p {
 
 h1 {
 	font-size: $extra-large;
-	font-family: 'Playfair Display', serif;
+	font-family: $serif;
 	margin-top: 25px;
 }
 
@@ -29,7 +39,7 @@ h2 {
 
 h3 {
 	letter-spacing: 2px;
-	font-family: 'Playfair Display', serif;
+	font-family: $serif;
 	font-size: $large;
 }
 
@@ -38,7 +48,7 @@ h3 {
 }
 
 h4, h5 {
-	font-size: $small;
+	font-size: $medium;
 	font-weight: 700;
 	margin-bottom: 20px;
 }
@@ -52,11 +62,12 @@ h4, h5 {
 	
 	&.dark {
 		background: $blue-dark;
+		color: white !important;
 	}
 	
 	&:hover, &:active, &:focus {
 		background: $orange;
-		color: white;
+		color: white !important;
 	}
 }
 
@@ -65,6 +76,10 @@ h4, h5 {
 	border: 1px solid $gray;
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
+
+.mb-25 {
+	margin-bottom: 25px;
 }
 
 .ml-25 {
@@ -85,9 +100,17 @@ h4, h5 {
 	transition: all 0.2s;
 }
 
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+	h1 {
+		font-size: $XXL;
+	}		
+}
+
 // Large devices (desktops, 992px and up)
 @media(min-width: 992px) {
-	
+
 }
 
 // Extra large devices (large desktops, 1200px and up)
@@ -111,5 +134,9 @@ h4, h5 {
 		-ms-flex: 0 0 66.666667%;
 		flex: 0 0 66.666667%;
 		max-width: 66.666667%;
+	}
+	
+	h1 {
+		font-size: calc(500% + 0.25vw);
 	}
 }
