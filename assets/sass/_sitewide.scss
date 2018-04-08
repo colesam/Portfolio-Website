@@ -12,6 +12,7 @@ a {
 a.link {
 	color: $blue-dark;
 	transition: none;
+	text-decoration: underline;
 	
 	&:hover {
 		color: $orange;
@@ -57,6 +58,7 @@ h4, h5 {
 	background: $blue;
 	border-radius: 0px;
 	color: white;
+	font-size: $small;
 	margin-bottom: 10px;
 	transition: all 0.2s;
 	

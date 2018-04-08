@@ -68,15 +68,15 @@ $(window).on('load', function() {
         contactPage     = new Section('contact');
     
     
-    //  POST REQUESTS
+    //  SPECIAL PAGE LOADS
     
-    //  if the page is accessed with a post request (reference mailer.php for initialization of $_POST)
-    if(typeof($_POST['submit']) !== 'undefined') {
-        
-        //  snap the window down to the contact section
-        $(window).scrollTop(contactPage.startPos);
-        
-    }
+    //  if the page is accessed with portfolio flag in url, scroll to the portfolio section
+    var url = $(location).attr('href');
+    if(url.substr('?portfolio=true')) portfolioPage.scrollTo();
+    
+    //  if the page is accessed with a post request (reference mailer.php for initialization of $_POST),
+    //  snap the window down to the contact section (no animation)
+    if(typeof($_POST['submit']) !== 'undefined') $(window).scrollTop(contactPage.startPos);
     
     
     //  NAVBAR EVENT LISTENERS AND FUNCTIONS

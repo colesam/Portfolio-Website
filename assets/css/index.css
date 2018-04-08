@@ -7,7 +7,8 @@ a {
 
 a.link {
   color: #18859b;
-  transition: none; }
+  transition: none;
+  text-decoration: underline; }
   a.link:hover {
     color: #FFAF54;
     text-decoration: underline; }
@@ -43,6 +44,7 @@ h4, h5 {
   background: #1DA0BA;
   border-radius: 0px;
   color: white;
+  font-size: calc(80%  + 0.25vw);
   margin-bottom: 10px;
   transition: all 0.2s; }
   .btn-custom.dark {
@@ -143,9 +145,6 @@ h4, h5 {
   font-weight: bold;
   margin-left: 10px;
   margin-right: 10px; }
-
-a.btn-custom {
-  color: white !important; }
 
 @media (min-width: 992px) {
   #about-buttons h5 {
