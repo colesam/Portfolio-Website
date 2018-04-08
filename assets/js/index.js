@@ -72,7 +72,7 @@ $(window).on('load', function() {
     
     //  if the page is accessed with portfolio flag in url, scroll to the portfolio section
     var url = $(location).attr('href');
-    if(url.substr('?portfolio=true')) portfolioPage.scrollTo();
+    if(url.includes('?portfolio=true')) portfolioPage.scrollTo();
     
     //  if the page is accessed with a post request (reference mailer.php for initialization of $_POST),
     //  snap the window down to the contact section (no animation)
