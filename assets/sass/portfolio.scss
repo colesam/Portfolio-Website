@@ -1,10 +1,15 @@
 //	SCSS Helper Files
+@import 'mixins';
 @import 'variables';
 @import 'sitewide';
 
 //	Portfolio CSS
 body {
 	background: $light-gray;
+}
+
+.box-shadow img, .box-shadow iframe {
+	@include box-shadow($box-shadow);
 }
 
 .container {
@@ -42,9 +47,10 @@ ul {
 
 .code {
 	background: $gray;
-	//font-size: $small;
+	font-family: $monospace;
 	padding-left: 5px;
 	padding-right: 5px;
+	white-space: nowrap;
 }
 
 .video {

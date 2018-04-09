@@ -10,6 +10,8 @@
 			<div class="col-12 col-md-10 col-lg-12">
 				<?php include "includes/portfolio-previews/breathe-buddy.php" ?>
 				<hr>
+				<?php include "includes/portfolio-previews/youtube-simple-viewer.php" ?>
+				<hr>
 				<?php include "includes/portfolio-previews/php-laravel-blog.php" ?>
 				<hr>
 				<?php include "includes/portfolio-previews/productivity-website.php" ?>

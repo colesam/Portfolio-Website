@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="../assets/css/portfolio.css">
 
         <!-- google fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Playfair+Display:700" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Playfair+Display:700|Roboto+Mono:300" rel="stylesheet"> 
 
         <!-- meta data -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,7 +30,7 @@
 					<hr>
 				</div>
 				<div class="col-12 col-lg-8 mb-25">
-					<div class="video">
+					<div class="box-shadow">
 						<iframe src="https://www.youtube-nocookie.com/embed/-Rb-diClxo4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 					</div>
 				</div>
@@ -59,10 +59,6 @@
 					    			<li>Allows user to select date within last 90 days to grab data from</li>
 					    			<li>Populates a table with air quality measurements based off of location and date</li>
 					    			<li>Shows a UI for filtering data by particle type or by minimum measurement per particle type</li>
-					    		</ul>
-					    	</div>
-					    	<div class="col-12">
-					    		<ul>
 					    			<li>Pops up measurement data when map marker is hovered over</li>
 					    			<li>Clusters markers together when they occupy a small area on the map</li>
 					    			<li>Features custom made cluster PNG files to match site theme</li>
@@ -78,16 +74,16 @@
 						<h4>HTML and CSS</h4>
 						<p>
 							I did a majority of the html structure and styling for the project. All CSS files can be found in the
-							<a class="link" href="https://github.com/colesam/Breathe-Buddy/tree/master/css" target="_blank">root/css</a> directory. 
+							<a class="link" href="https://github.com/colesam/Breathe-Buddy/tree/master/css?ts=4" target="_blank">root/css</a> directory. 
 							The HTML is broken up into two files and incorporated into <span class="code">index.html</span> by using 
 							<span class="code">ng-include</span> directives. These two files can be found in the 
-							<a class="link" href="https://github.com/colesam/Breathe-Buddy/tree/master/html" target="_blank">root/html</a> directory.
+							<a class="link" href="https://github.com/colesam/Breathe-Buddy/tree/master/html?ts=4" target="_blank">root/html</a> directory.
 						</p>
 						<p>
 							Because the html for both pages are included in one html file, they are switched between using
 							JQuery and CSS. I programmed this functionality in to allow for extremely fast loading between pages, and to allow the large
 							png file from the about-the-project page to load while the user is on the app's page. This functionality is in 
-							<a class="link" href="https://github.com/colesam/Breathe-Buddy/blob/master/js/app.js" target="_blank">root/js/app.js</a>
+							<a class="link" href="https://github.com/colesam/Breathe-Buddy/blob/master/js/app.js?ts=4" target="_blank">root/js/app.js</a>
 							in the <span class="code">$(document).ready(fn)</span> function.
 						</p>
 						<h4>DATE PICKER and JQUERY</h4>
@@ -99,7 +95,7 @@
 					    </p>
 					    <p>
 					    	The code used to implement this can be found in 
-					    	<a class="link" href="https://github.com/colesam/Breathe-Buddy/blob/master/js/controllers/airQualityController.js" target="_blank">root/js/controllers/airQualityController.js</a>
+					    	<a class="link" href="https://github.com/colesam/Breathe-Buddy/blob/master/js/controllers/airQualityController.js?ts=4" target="_blank">root/js/controllers/airQualityController.js</a>
 					    	. You will want to look towards the bottom of the file for the section labeled "Date Picker".
 					    </p>
 					    <p>

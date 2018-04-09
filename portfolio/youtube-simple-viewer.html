@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>Samuel Cole</title>
+
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/portfolio.css">
+
+        <!-- google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Playfair+Display:700|Roboto+Mono:300" rel="stylesheet"> 
+
+        <!-- meta data -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+
+    </head>
+<body>
+
+	<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-12 col-hg-8 mb-25">
+					<h1>YouTube Simple Viewer</h1>
+					<hr>
+				</div>
+				<div class="col-12 col-lg-8 mb-25">
+					<div class="box-shadow">
+						<img class="img-fluid" src="../includes/img/youtube.jpg">
+					</div>
+				</div>
+				<div class="col-12 col-hg-8">
+					<div class="mb-25">
+					    <h3 class="mb-title">Description</h3>
+					    <p>
+							This project is a web application I built using <a class="link" href="https://reactjs.org/" target="_blank">ReactJS</a> and the 
+							<a class="link" href="https://developers.google.com/youtube/" target="_blank">YouTube API</a>. The application is a very simple interface for 
+							watching YouTube videos. Components load separately from one another resulting in a very fast and clean viewing experience.
+					    </p>
+					    <p>
+							This project was made by following along with Stephen Grider's React course on Udemy. This project differs from Stephen Grider's in styling and some 
+							parts of the implementation.
+					    </p>
+					</div>
+					<div class="mb-25">
+					    <h3 class="mb-title">Features</h3>
+					    <div class="row">
+					    	<div class="col-12">
+					    		<ul>
+									<li>Search for YouTube videos by clicking the Search button or hitting the 'Enter' key</li>
+									<li>Choose from a list of five YouTube videos</li>
+									<li class="no-border">
+										Continue searching for new YouTube videos while the current video remains on the page 
+										(implementation is specific to my project)
+									</li>
+					    		</ul>
+					    	</div>
+					    </div>
+					</div>
+					<div class="mb-25">
+						<h3 class="mb-title">Code I Wrote</h3>
+						<h4>React Components</h4>
+					    <p>
+					    	I wrote the <span class="code">index.js</span> file and ReactJS components found in the 
+					    	<a class="link" href="https://github.com/colesam/YouTube-Simple-Viewer/tree/master/src?ts=4" target="_blank">root/src</a> directory. 
+					    </p>
+					    <p>
+					    	Inside <span class="code">index.js</span> you will find the AJAX requests I wrote to the YouTube API. I used 
+					    	the <a class="link" href="https://www.npmjs.com/package/axios" target="_blank" target="_blank">Axios module</a> to make the requests and run
+					    	callbacks using its built in promises.
+					    </p>
+					    <p>
+					    	The files in <a href="https://github.com/colesam/YouTube-Simple-Viewer/tree/master/src/components?ts=4" target="_blank">root/src/components</a> 
+					    	subdirectory contain primarily html in the form of JSX. The two components that I spent the most time on were 
+					    	<a 
+					    	class="link" 
+					    	href="https://github.com/colesam/YouTube-Simple-Viewer/tree/master/src/components/video_list_item.js?ts=4" 
+					    	target="_blank">root/src/components/video_list_item.js</a> 
+					    	and
+					    	<a 
+					    	class="link" 
+					    	href="https://github.com/colesam/YouTube-Simple-Viewer/tree/master/src/components/video_detail.js?ts=4" 
+					    	target="_blank">root/src/components/video_detail.js</a>.
+					    </p>
+						<h4>SASS Styling</h4>
+						<p>
+							I styled this project using the SASS preprocessor. The SASS files and the generated CSS can both be found in the
+							<a class="link" href="https://github.com/colesam/YouTube-Simple-Viewer/tree/master/style?ts=4" target="_blank">root/style</a> directory.
+						</p>
+						<p>
+							I styled the UI for this app to be very similar to the way YouTube videos look because the interface is familiar to
+							users. It has been simplified to only display search results instead of suggested videos. It also does not display
+							any comments or description to keep the interface as clean and "Simple" as possible.
+						</p>
+					</div>
+					<div class="mb-25">
+					    <h3 class="mb-title">Difficulties</h3>
+					    <h4>Setting Selected Video</h4>
+					    <p>
+					    	The instructor for the course I was following along with would always initialize the selected video to be the first result returned
+					    	from a video search. I wanted my application to be able to continue playing even if the videos in the video list were changing due
+					    	to a search.
+					    </p>
+					    <p>
+					    	My first solution was to create two functions, one to populate the list of videos and one to load a specific video. I still wanted
+					    	to use the first search result as the selected video when the page initializes, but on all subsequent searches I wanted the selected 
+					    	video to remain the same.
+					    </p>
+					    <p>
+					    	I quickly realized that I would need to use a promise in the constructor of my App class, because I would not be able to initialize
+					    	the selected video until the first search had returned results.
+					    </p>
+					    <p>
+					    	My solution to this problem was to create a single function inside 
+					    	the App class in <span class="code">index.js</span>. 
+					    </p>
+					    <p>
+					    	<span class="code">videoSearch( searchTerm, callback )</span>
+					    </p>
+					    <p>
+					    	This function made an AJAX request to YouTube using the searchTerm parameter, 
+					    	and then ran the callback parameter if it was provided. I simply provided the following as a callback to the first call to 
+					    	<span class="code">videoSearch()</span>:
+					    </p>
+					    <p>
+					    	<span class="code">() => { this.setState({ selectedVideo: this.state.videos[0] }); }</span>
+					    </p>
+					    <h4>Including Description</h4>
+					    <p>
+					    	I planned on including an expandable description for the video currently being played only to realize that the YouTube API
+					    	returns these descriptions as a string. It's very common for YouTube video descriptions to contain formatted text including
+					    	anchor tags and line breaks.
+					    </p>
+					    <p>
+					    	I considered using a regular expression to detect web addresses and convert them to anchor tags, but that would still leave
+					    	me with a long block of text unseparated by line breaks. In the end, I decided to put a link to the YouTube video where
+					    	the description would have been.
+					    </p>
+					</div>
+					<div class="mb-25">
+						<div class="row">
+							<div class="col-12 col-md-6">
+								<a class="btn btn-custom form-control" href="../index.php?portfolio=true">Back to Portfolio</a>
+							</div>
+							<div class="col-12 col-md-6">
+								<a class="btn btn-custom dark form-control" href="https://github.com/colesam/Youtube-Simple-Viewer" target="_blank">View Project on GitHub</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+</body>
+</html>
