@@ -17,26 +17,26 @@ body {
   font-family: "Noto Sans", sans-serif; }
 
 p {
-  font-size: calc(80%  + 0.25vw); }
+  font-size: 1rem; }
 
 h1 {
-  font-size: calc(200% + 0.25vw);
+  font-size: 2rem;
   font-family: "Playfair Display", serif;
   margin-top: 25px; }
 
 h2 {
-  font-size: calc(110% + 0.25vw); }
+  font-size: 1.2rem; }
 
 h3 {
   letter-spacing: 2px;
   font-family: "Playfair Display", serif;
-  font-size: calc(135% + 0.25vw); }
+  font-size: 1.5rem; }
 
 h3 {
   font-weight: 700; }
 
 h4, h5 {
-  font-size: calc(110% + 0.25vw);
+  font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 20px; }
 
@@ -44,7 +44,7 @@ h4, h5 {
   background: #1DA0BA;
   border-radius: 0px;
   color: white;
-  font-size: calc(80%  + 0.25vw);
+  font-size: 1rem;
   margin-bottom: 10px;
   transition: all 0.2s; }
   .btn-custom.dark {
@@ -79,10 +79,10 @@ h4, h5 {
 
 @media (min-width: 768px) {
   h1 {
-    font-size: calc(350% + 0.25vw); } }
+    font-size: 3rem; } }
 @media (min-width: 1200px) {
   h3 {
-    font-size: calc(200% + 0.25vw); } }
+    font-size: 2rem; } }
 @media (min-width: 1500px) {
   .col-hg-6 {
     -webkit-box-flex: 0;
@@ -131,7 +131,7 @@ h4, h5 {
     width: 45%; } }
 @media (min-width: 1500px) {
   h1 {
-    font-size: calc(500% + 0.25vw); } }
+    font-size: 4rem; } }
 .portfolio-item img {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   margin-bottom: 20px; }
@@ -141,7 +141,7 @@ h4, h5 {
   margin-bottom: 20px; }
 
 .technologies-used span {
-  font-size: calc(60%  + 0.25vw);
+  font-size: 0.7rem;
   font-weight: bold;
   margin-left: 10px;
   margin-right: 10px; }
@@ -162,13 +162,13 @@ nav {
   display: none; }
 
 .nav-link {
-  font-size: calc(110% + 0.25vw);
+  font-size: 1.2rem;
   font-weight: 500;
   margin-left: 20px; }
 
 .navbar-logo {
   font-family: 'Playfair Display', serif;
-  font-size: calc(135% + 0.25vw);
+  font-size: 1.5rem;
   margin: 0; }
 
 .navbar-toggler {
@@ -187,7 +187,7 @@ ul.nav {
 
 @media (min-width: 992px) {
   .navbar-logo {
-    font-size: calc(200% + 0.25vw); } }
+    font-size: 2rem; } }
 @media (min-width: 1200px) {
   .navbar {
     padding-left: 50px;

@@ -17,26 +17,26 @@ body {
   font-family: "Noto Sans", sans-serif; }
 
 p {
-  font-size: calc(80%  + 0.25vw); }
+  font-size: 1rem; }
 
 h1 {
-  font-size: calc(200% + 0.25vw);
+  font-size: 2rem;
   font-family: "Playfair Display", serif;
   margin-top: 25px; }
 
 h2 {
-  font-size: calc(110% + 0.25vw); }
+  font-size: 1.2rem; }
 
 h3 {
   letter-spacing: 2px;
   font-family: "Playfair Display", serif;
-  font-size: calc(135% + 0.25vw); }
+  font-size: 1.5rem; }
 
 h3 {
   font-weight: 700; }
 
 h4, h5 {
-  font-size: calc(110% + 0.25vw);
+  font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 20px; }
 
@@ -44,7 +44,7 @@ h4, h5 {
   background: #1DA0BA;
   border-radius: 0px;
   color: white;
-  font-size: calc(80%  + 0.25vw);
+  font-size: 1rem;
   margin-bottom: 10px;
   transition: all 0.2s; }
   .btn-custom.dark {
@@ -79,10 +79,10 @@ h4, h5 {
 
 @media (min-width: 768px) {
   h1 {
-    font-size: calc(350% + 0.25vw); } }
+    font-size: 3rem; } }
 @media (min-width: 1200px) {
   h3 {
-    font-size: calc(200% + 0.25vw); } }
+    font-size: 2rem; } }
 @media (min-width: 1500px) {
   .col-hg-6 {
     -webkit-box-flex: 0;
@@ -112,12 +112,12 @@ body {
   margin-bottom: 1.05rem; }
 
 h4 {
-  font-size: calc(80%  + 0.25vw);
+  font-size: 1rem;
   font-weight: bold;
   margin: 0 0 0.3rem 0; }
 
 li {
-  font-size: calc(80%  + 0.25vw);
+  font-size: 1rem;
   padding-top: 5px;
   padding-bottom: 5px;
   border-bottom: 1px dashed #CCCCCC; }
