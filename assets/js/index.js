@@ -82,18 +82,18 @@ $(window).on('load', function() {
     //  NAVBAR EVENT LISTENERS AND FUNCTIONS
     $(window).scroll(function() {
         
-        //  only display navbar outside of landing page
-        if($(document).scrollTop() <= aboutPage.startPos - navbarHeight) {
+        //  display nav when you exit landing page
+        if(!($(document).scrollTop() <= aboutPage.startPos - navbarHeight)) {
 
-            $('.navbar').addClass('hidden');
-            
-        } else {
-            
             $('.navbar').removeClass('hidden');
+            $(this).off('scroll');
             
         }
         
     });
+    
+    //  trigger scroll event in case loaded page did not start in landing page
+    $(window).trigger('scroll');
     
     $(landingPage.nav).click(function() {
         
