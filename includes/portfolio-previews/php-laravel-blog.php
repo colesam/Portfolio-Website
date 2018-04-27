@@ -10,6 +10,7 @@
 			<span>JAVASCRIPT</span>
 			<span>PHP</span>
 			<span>LARAVEL 5.2</span>
+            <span>MySQL DATABASE</span>
 		</div>
         <p>
 			This is a content management system for a blog website that runs on the Laravel PHP framework. 
