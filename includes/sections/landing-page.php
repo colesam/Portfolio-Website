@@ -6,7 +6,7 @@
 		<div class="landing-header d-flex flex-column align-items-center align-items-md-start justify-content-md-center">
 			<h1>SAMUEL COLE</h1>
 			<div>
-				<h2>Web Development and Design</h2>
+				<h2>Software Engineer</h2>
 				<button class="btn form-control btn-custom about-nav">Get Started</button>
 			</div>
 		</div>
