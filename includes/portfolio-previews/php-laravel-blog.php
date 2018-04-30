@@ -20,7 +20,10 @@
 			blog posts.
 		</p> 
 		<div class="row justify-content-center">
-			<div class="col-12">
+			<div class="col-12 col-lg-6">
+				<a class="btn btn-custom form-control" href="portfolio/laravel-blog.html">View Project Page</a>
+			</div>
+			<div class="col-12 col-lg-6">
 				<a class="btn btn-custom dark form-control" href="https://github.com/colesam/Laravel-Blog" target="_blank">View Files on GitHub</a>
 			</div>
 		</div>

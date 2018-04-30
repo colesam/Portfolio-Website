@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>Samuel Cole</title>
+
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/portfolio.css">
+
+        <!-- google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Playfair+Display:700|Roboto+Mono:300" rel="stylesheet"> 
+
+        <!-- meta data -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+
+    </head>
+<body>
+
+	<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-12 col-hg-8 mb-25">
+					<h1>Laravel Blog</h1>
+					<hr>
+				</div>
+				<div class="col-12 col-lg-8 mb-25">
+					<div class="video box-shadow">
+						<iframe src="https://www.youtube-nocookie.com/embed/8bXVvgnd7u0?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
+					<div class="table-of-contents">
+						<a class="link" href="https://youtu.be/8bXVvgnd7u0?t=1m15s" target="_blank">Installation</a>
+						<a class="link" href="https://youtu.be/8bXVvgnd7u0?t=2m02s" target="_blank">Setup .env</a>
+						<a class="link" href="https://youtu.be/8bXVvgnd7u0?t=3m44s" target="_blank">Migrations and Seeding</a>
+						<a class="link" href="https://youtu.be/8bXVvgnd7u0?t=5m12s" target="_blank">Feature Demo</a>
+					</div>
+				</div>
+				<div class="col-12 col-hg-8">
+					<div class="mb-25">
+					    <h3 class="mb-title">Description</h3>
+					    <p>
+					    	This project is a content management system for managing a blogging website. The project leverages Laravel's MVC structure to 
+					    	keep code organized into models, views, and controllers.
+					    </p>
+					    <p>
+					    	I built this project during my free time to learn more about MVC frameworks and more specifically, the Laravel framework.
+					    	This project uses Laravel version 5.2 and Bootstrap version 4.0.
+					    </p>
+					</div>
+					<div class="mb-25">
+					    <h3 class="mb-title">Features</h3>
+					    <div class="row">
+					    	<div class="col-12">
+					    		<ul>
+									<li>Guests may view the public sections of the site</li>
+									<li>Authenticated users may create, edit, and delete blog posts</li>
+									<li>Authenticated users may assign a category to a blog post</li>
+									<li>Authenticated users may manage the site-wide categories, including creating, editing, or deleting categories</li>
+									<li>Assign zero to many tags to a blog post, create and delete tags</li>
+									<li>Guests may sign up for an account (all accounts are administrative at the moment)</li>
+									<li class="no-border">Registered users may log in, or request an email be sent to reset password</li>
+					    		</ul>
+					    	</div>
+					    </div>
+					</div>
+					<div class="mb-25">
+						<h3 class="mb-title">Code I Wrote</h3>
+						<p>
+							Laravel projects include a lot of php code that are built upon to create a website. Below I have outlined where you can find the code that I wrote in the folder structure.
+						</p>
+						<h4>ROUTES</h4>
+						<p>
+							In order to create a RESTful application, I needed control over where specific URLs would send users. I wrote all of the routes
+							in the <a class="link" href="https://github.com/colesam/Laravel-Blog/blob/master/app/Http/routes.php?ts=4" target="_blank">root/app/Http/routes.php</a> 
+							file.
+						</p>
+						<p>
+							Each of the routes in this file specify a method of a Controller object that should be called if the URL matches the route's URL.
+						</p>
+						<h4>CONTROLLERS</h4>
+					    <p>
+					    	The controllers in this project are responsible for communicating with the project's models and views in order to return a view
+					    	to the end user that contains the correct information from the model. You can find all the controllers that I wrote in the 
+					    	<a class="link" href="https://github.com/colesam/Laravel-Blog/tree/master/app/Http/Controllers?ts=4" target="_blank">root/app/Http/Controllers</a>
+					    	directory. It should be noted that almost all of the code in the Auth subdirectory was generated automatically by the project.
+					    </p>
+					    <p>
+					    	Of the controllers in this project, I believe the most extensive and interesting are the Post, Category, and Tag controllers.
+					   		These controllers are responsible for returning views that represent a resource of the application, and often required create,
+					   		edit, and delete logic.
+					    </p>
+					    <h4>MODELS</h4>
+					    <p>
+					    	The models in this project are responsible for communicating with the MySQL database and returning that information to the controllers.
+					    	The models for this project can be found in the 
+					    	<a class="link" href="https://github.com/colesam/Laravel-Blog/tree/master/app?ts=4" target="_blank">root/app</a> directory and will be
+					    	named following the format of: <span class="code">Resource.php</span>.
+					    </p>
+					    <p>
+					    	The most interesting models are the Category and Tag models. These both contain a custom method <span class="code">Resource.allWithCount()</span>, 
+					    	that returns all of the entries of the resource and counts it's instances in the application. For a more detailed explanation of this functionality,
+					    	reference the Difficulties section below.
+					    </p>
+					    <h4>MIGRATIONS AND SEEDERS</h4>
+					    <p>
+					    	To allow the project to be easily duplicated on any machine, I wrote migrations and database seeders that can be found in the 
+					    	<a class="link" href="https://github.com/colesam/Laravel-Blog/tree/master/database?ts=4" target="_blank">root/database</a> directory. The video at the
+					    	top of this page explains in detail how to use these migrations and seeders to get the project running on your machine.
+					    </p>
+					    <h4>VIEWS and CSS</h4>
+					    <p>
+					    	I wrote all of the template views for this project. They can be found in the 
+					    	<a class="link" href="https://github.com/colesam/Laravel-Blog/tree/master/resources/views?ts=4" target="_blank">root/resources/views</a>
+					    	directory. I wrote very little custom CSS for this project, because I was primarily focused on creating a functioning application. Any
+					    	custom CSS that I did write will be found in the <a class="link" href="https://github.com/colesam/Laravel-Blog/tree/master/public/css?ts=4" target="_blank">root/public/css</a>
+					    	directory.
+					    </p>
+					</div>
+					<div class="mb-25">
+					    <h3 class="mb-title">Difficulties</h3>
+					    <h4>RESOURCE WITH COUNT</h4>
+					    <p>
+					    	The most difficult problem I ran into when developing this project was listing the number of posts associated with a specific Tag or Category.
+					    	This is a feature that is used on the index pages of the Tags and Categories resources.
+					    </p>
+					    <p>
+					    	Categories have a one-to-many relationship to Posts. Tags have a many-to-many relationship to Posts. This means that getting the counts of
+					    	associations requires more than querying a single table on the database.
+					    </p>
+					    <p>
+					    	My initial solution to the problem was to create a num_posts column in the Categories and Tags tables. I believe that this would have been
+					    	hard to maintain, and could easily result in errors. For example, if I were to delete a Post, I would have to remember to access all the Tags that
+					    	were related to that post and modify their num_posts column.
+					    </p>
+					    <p>
+					    	Another option would be to write a SQL query that selects the count of rows from the post_tag table. In the moment I decided against this because
+					    	Laravel 5.2 didn't provide a clear way to write custom queries using the Model objects.
+					    </p>
+					    <p>
+					    	Instead, I decided to create a method <span class="code">getAllWithCount()</span> in the Category and Tag controllers. This method
+					    	makes multiple requests to the MySQL database and manually counts the associations. It then returns an associative array with a num_posts
+					    	attribute added, resulting in similar functionality to adding that column to the table itself, without the overhead.
+					    </p>
+					    <h4>SESSION FLASH MESSAGES</h4>
+					    <p>
+					    	I wanted to be able to send information to a user about the success or failure of their actions. For example, if a user creates a post,
+					    	I want to route them back to the created post with a message of success, or redirect them back to the form letting them know there was
+					    	a problem.
+					    </p>
+					    <p>
+					    	Creating special views to display different error or success messages seemed extreme. Instead I opted to use 
+					    	<span class="code">Session::flash(msgType, msg)</span> to store a temporary message in the session variable. The views access this message
+					    	in the <a class="link" href="https://github.com/colesam/Laravel-Blog/blob/master/resources/views/partials/_messages.blade.php?ts=4" target="_blank">root/resources/views/partials/_messages.blade.php</a> 
+					    	file, which is included on all views.
+					    </p>
+					</div>
+					<div class="mb-25">
+						<div class="row">
+							<div class="col-12 col-md-6">
+								<a class="btn btn-custom form-control" href="../index.php?portfolio=true">Back to Portfolio</a>
+							</div>
+							<div class="col-12 col-md-6">
+								<a class="btn btn-custom dark form-control" href="https://github.com/colesam/Laravel-Blog" target="_blank">View Project on GitHub</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+</body>
+</html>
