@@ -10,17 +10,17 @@
 			<div class="col-12 col-lg-8">
 				<p>
 					My name is Sam Cole and I am a senior studying at the University of St. Thomas in St. Paul, Minnesota. 
-					In May 2018, I will graduate with a double-major in Computer Science and German. Web development is something 
+					In May 2018, I will graduate with a double-major in Computer Science and German. Software development is something 
 					I have been pursuing alongside my coursework and will be turning into a career after graduation.
 				</p>
 				<p>
-					I love web development because it is deeply creative work who's final result is seen by users from all over the planet. I believe 
-					that everything on the web should look great, function smoothly, and be so intuitive that my grandmother could 
-					figure it out. As our lives become more integrated with the Internet, I am going to continue to apply my passion for programming 
-					and design to make everyday life easier and more enjoyable.
+					I love software and web development because it is deeply creative work who's final result is seen by users from all over the planet. I believe 
+					that all software should look great, function smoothly, and be so intuitive that my grandmother could 
+					figure it out. As our lives become more integrated with the technology and the Internet, I am going to continue to apply my passion for programming 
+					to make everyday life easier and more enjoyable.
 				</p>
 				<p>
-					I also make it a point to be a multi-dimensional individual. Dedicating my time to activities beyond the web inspires me 
+					I also make it a point to be a multi-dimensional individual. Dedicating my time to activities beyond programming inspires me 
 					and boosts my creativity. I enjoy many hobbies such as playing piano and guitar, and going backpacking in Minnesota's wilderness.
 				</p>
 			</div>
