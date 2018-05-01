@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>Samuel Cole</title>
+
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/portfolio.css">
+
+        <!-- google fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Playfair+Display:700|Roboto+Mono:300" rel="stylesheet"> 
+
+        <!-- meta data -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+
+    </head>
+<body>
+
+	<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-12 col-hg-8 mb-25">
+					<h1>IMDB Wiki</h1>
+					<hr>
+				</div>
+				<div class="col-12 col-lg-8 mb-25">
+					<div class="video box-shadow">
+						<iframe src="https://www.youtube-nocookie.com/embed/0xT0h4b1GA8?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
+				</div>
+				<div class="col-12 col-hg-8">
+					<div class="mb-25">
+					    <h3 class="mb-title">Description</h3>
+					    <p>
+					    	This project is a web application I built with my partner, Belinda Huang, for our CISC 375 Web Development course at 
+					    	the University of St. Thomas.
+					    </p>
+					    <p>
+					    	The project was built using HTML5, CSS3, Bootstrap, NodeJS, Express, HoganJS, and SQLite 3. It uses a SQLite database our instructor 
+					    	created by combining the databases found on <a href="https://www.imdb.com/interfaces/" target="_blank">imdb's website</a>. 
+					    	The combined database is available for download <a href="https://www.dropbox.com/s/gb4uo4x7694vzt8/imdb.sqlite3?dl=0" target="_blank">here</a>.
+					    </p>
+					    <p>
+					    	It should be noted that there were no styling requirements for this project. In order to focus our efforts on the back end, we used the bootstrap 
+					    	grid system to handle our layout, and did little custom CSS.
+					    </p>
+					</div>
+					<div class="mb-25">
+					    <h3 class="mb-title">Features</h3>
+					    <div class="row">
+					    	<div class="col-12">
+					    		<ul>
+									<li>Allows users to search for both Titles and People</li>
+									<li>Features a page to view information about a single title or person</li>
+									<li>Asynchronously loads data on the page to increase page load performance</li>
+									<li>Titles and people are editable pages and it will save your changes to the database</li>
+									<li class="no-border">Features about the project page with short bios of each partner, as well as a video demonstration of the site</li>
+					    		</ul>
+					    	</div>
+					    </div>
+					</div>
+					<div class="mb-25">
+						<h3 class="mb-title">Code I Wrote</h3>
+						<p>
+							My partner and I both contributed a lot to this project. We also decided that it would be most efficient if we each focused
+							on separate parts of the project. This strategy still required a lot of teamwork and communication between us, while allowing us
+							to take advantages of our individual strengths.
+						</p>
+						<p>
+							Below you will find an explanation of what parts of the project I focused on, and where to find those parts within the project directory.
+						</p>
+						<h4>FOLDER STRUCTURE</h4>
+						<p>
+							I generated the structure of the project using the 
+							<a class="link" href="https://www.npmjs.com/package/express-generator" target="_blank">express-generator</a> module from NPM.
+							This set up the structure of the project with express and hoganJS already integrated. 
+						</p>
+						<h4>VIEWS</h4>
+						<p>
+							I created all the view templates found in the <a class="link" href="https://github.com/colesam/IMDB-Wiki/tree/master/views?ts=4" target="_blank">root/views</a>
+							directory. The exception to this are the people and people-edit templates which were written by my partner, Belinda Huang.
+						</p>
+						<p>
+							Templating was necessary for displaying information on titles and people easily. We simply needed to create a template and then supply that template with
+							information from the SQL database. Templates also allowed us to create partial files for the header and footer. This kept the actual templates clear of
+							copy and pasted html.
+						</p>
+						<p>
+							I chose to use the HoganJS templating engine for my views because it was very easy to set up with the express-generator. It turned out that it was missing 
+							some key features that caused difficulties (see below). If I were to redo the project, I would likely choose a different templating engine.
+						</p>
+						<h4>ROUTES and DATA</h4>
+						<p>
+							You will find the routes for the project in the 
+							<a class="link" href="https://github.com/colesam/IMDB-Wiki/blob/master/routes/index.js?ts=4" target="_blank">root/routes/index.js</a> directory.
+							This allowed us to have more control over where a URL directs a user. I wrote the routes that deal with titles and my partner wrote the routes that
+							deal with people. All routes either retrieve or post data to the database. Methods for retrieving or updating data were organized into custom modules, 
+							found in the <a class="link" href="https://github.com/colesam/IMDB-Wiki/tree/master/custom_modules?ts=4" target="_blank">root/custom_modules</a> directory. 
+						</p>
+						<p>
+							I also wrote all of the logic for the AJAX routes. These are routes that JQuery code could access in order to load resources asynchronously. For example,
+							instead of waiting for the title poster to load before sending the view, I sent the view immediately and then requested the poster from the
+							<span class="code">/ajax/titles/posters/:title_id</span> route using JQuery. 
+						</p>
+						<p>
+							An interesting ajax route to look at is the <span class="code">/ajax/cast/:title_id</span> route. This required me to write a separate function,
+							<span class="code">data_retriever.getCastFromTitleId()</span>. This was one of the more difficult parts of the project and is outlined
+							in the difficulties section below.
+						</p>
+					<div class="mb-25">
+					    <h3 class="mb-title">Difficulties</h3>
+					    <h4>GET CAST</h4>
+					    <p>
+					    	The most difficult part of this project was writing the <span class="code">getCastFromTitleId()</span> function in the get_data.js custom module.
+					    	The purpose of this function is to take a title_id and find the cast for that title. Unfortunately, the way the database was set up makes this very difficult.
+					    </p>
+					    <p>
+					    	The database keeps the cast split into two tables, Principals and Crew. There Schemas looked like this:
+					    </p>
+					    <p>
+					    	<span class="code">Principals(tconst, ordering, nconst, category, job, characters)</span>
+					    </p>
+					    <p>
+					    	<span class="code">Crew(tconst, directors, writers)</span>
+					    </p>
+					    <p>
+					    	Principals was very easy to join with the Names database because it had an <span class="code">nconst</span> column that acts as a name id. Crew on the other handle
+					    	supplies you with a comma-delimited list of name ids for directors and writers, given a particular title id. To make matters worse, there were duplicates between 
+					    	Principals and Crew. For example, sometimes a director was included in Principals and Crew, sometimes only in Principals, and sometimes only in Crew.
+					    </p>
+					    <p>
+					    	I attacked this problem by writing a second helper function <span class="code">getDataByIdArray()</span> inside <span class="code">get_data.js</span>. I would
+					    	convert the comma-delimited list of name ids into an array and pass it to this function. The function would return a <span class="code">Promise.all</span> object
+					    	that I could use to get an array of rows from the Name table.
+					    </p>
+					    <p>
+					    	By abstracting out the most complicated part of getting the Cast, I was able to clean up my <span class="code">getCastFromTitleId()</span> to only do the following.
+					    	First, use a promise to get an array of rows from the Name table that correspond to Principals from the title we are working with. Next, use a promise to get an array
+					    	of rows from the Name table that correspond to Crew members. Once both of these promises resolve, combine the two arrays while using name ids to ensure there are no
+					    	duplicates.
+					    </p>
+					    <h4>LOGIC-LESS TEMPLATING</h4>
+					    <p>
+					    	About half way through the project I realized that there was a major problem with the HoganJS templating engine. The problem was that .hjs templates do not support 
+					    	very robust conditional checks. This made doing things like setting default values of form inputs very difficult.
+					    </p>
+					    <p>
+					    	An example of how I overcame this problem can be seen in the 
+					    	<a class="link" href="https://github.com/colesam/IMDB-Wiki/blob/master/views/title-edit.hjs" target="_blank">root/views/title-edit.hjs</a> template. The .hjs templates only
+					    	support whether or not a variable has been set, but do not support checking if the variable has been set to a particular value.
+					    </p>
+					    <p>
+					    	I wanted to have the genres associated with the title being edited to be pre-selected in the form. Within the <span class="code">/titles/:title_id/edit</span> route,
+					    	a video object is passed to the <span class="code">title-edit.hjs</span> view. For each genre associated with this video, I added an attribute to the video object so that
+					    	I could set the selected options with the following line within each option element of the select input:
+					    </p>
+					    <p>
+					    	<span class="code">{{#video.Romance}}selected{{/video.Romance}}</span>
+					    </p>
+					    <p>
+					    	This would check if the passed video object had a 'Romance' attribute. If it did, it would set the romance option to selected, solving my logic-less templating issue. In
+					    	the future I would choose a different templating engine to avoid having to hack this functionality together.
+					    </p>
+					</div>
+					<div class="mb-25">
+						<div class="row">
+							<div class="col-12 col-md-6">
+								<a class="btn btn-custom form-control" href="../index.php?portfolio=true">Back to Portfolio</a>
+							</div>
+							<div class="col-12 col-md-6">
+								<a class="btn btn-custom dark form-control" href="https://github.com/colesam/Breathe-Buddy" target="_blank">View Project on GitHub</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+</body>
+</html>
