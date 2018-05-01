@@ -9,7 +9,9 @@
 		<div class="row justify-content-center" id="portfolio-items">
 			<div class="col-12 col-md-10 col-lg-12">
 				<?php include "includes/portfolio-previews/php-laravel-blog.php" ?>
-				<hr>
+                <hr>
+                <?php include "includes/portfolio-previews/imdb-wiki.php" ?>
+                <hr>
 				<?php include "includes/portfolio-previews/breathe-buddy.php" ?>
 				<hr>
 				<?php include "includes/portfolio-previews/youtube-simple-viewer.php" ?>
