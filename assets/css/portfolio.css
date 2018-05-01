@@ -137,6 +137,11 @@ ul {
   padding-right: 5px;
   white-space: nowrap; }
 
+.table-of-contents {
+  margin-top: 25px; }
+  .table-of-contents a {
+    display: block; }
+
 .video {
   width: 100%;
   height: 0;
