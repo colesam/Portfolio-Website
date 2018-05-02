@@ -60,7 +60,7 @@
 									<li>Features a page to view information about a single title or person</li>
 									<li>Asynchronously loads data on the page to increase page load performance</li>
 									<li>Titles and people are editable pages and it will save your changes to the database</li>
-									<li class="no-border">Features about the project page with short bios of each partner, as well as a video demonstration of the site</li>
+									<li class="no-border">Features an "About the Project" page with short bios of each partner, as well as a video demonstration of the site</li>
 					    		</ul>
 					    	</div>
 					    </div>
@@ -68,12 +68,12 @@
 					<div class="mb-25">
 						<h3 class="mb-title">Code I Wrote</h3>
 						<p>
-							My partner and I both contributed a lot to this project. We also decided that it would be most efficient if we each focused
-							on separate parts of the project. This strategy still required a lot of teamwork and communication between us, while allowing us
+                            My partner and I both contributed a lot to this project. We also decided that it would be most efficient if we focused our efforts
+                            on different segments. This strategy still required a lot of teamwork and communication between us, while allowing us
 							to take advantage of our individual strengths.
 						</p>
 						<p>
-							Below you will find an explanation of what parts of the project I focused on, and where to find those parts within the project directory.
+							Below you will find an explanation of what parts of the project I focused on, and where to find the code I wrote within the project directory.
 						</p>
 						<h4>FOLDER STRUCTURE</h4>
 						<p>
@@ -88,40 +88,41 @@
 						</p>
 						<p>
 							Templating was necessary for displaying information on titles and people easily. We simply needed to create a template and then supply that template with
-							information from the SQL database. Templates also allowed us to create partial files for the header and footer. This kept the actual templates clear of
+							information from the SQL database. Templates also allowed us to create partial files for the header and footer. This kept views clear of
 							copy and pasted html.
 						</p>
 						<p>
-							I chose to use the HoganJS templating engine for my views because it was very easy to set up with the express-generator. It turned out that it was missing 
-							some key features that caused difficulties (see below). If I were to redo the project, I would likely choose a different templating engine.
+							I chose to use the HoganJS templating engine for our views because it was very easy to set up with the express-generator. It turned out that it was missing 
+							some key features that caused problems later on (see below). If I were to redo the project, I would likely choose a different templating engine.
 						</p>
 						<h4>ROUTES and DATA</h4>
 						<p>
 							You will find the routes for the project in the 
 							<a class="link" href="https://github.com/colesam/IMDB-Wiki/blob/master/routes/index.js?ts=4" target="_blank">root/routes/index.js</a> directory.
-							This allowed us to have more control over where a URL directs a user. I wrote the routes that deal with titles and my partner wrote the routes that
+							Routes allowed us to have more control over where a URL directs a user. I wrote the routes that deal with titles and my partner wrote the routes that
 							deal with people. All routes either retrieve or post data to the database. Methods for retrieving or updating data were organized into custom modules, 
 							found in the <a class="link" href="https://github.com/colesam/IMDB-Wiki/tree/master/custom_modules?ts=4" target="_blank">root/custom_modules</a> directory. 
 						</p>
 						<p>
-							I also wrote all of the logic for the AJAX routes. These are routes that JQuery code could access in order to load resources asynchronously. For example,
-							instead of waiting for the title poster to load before sending the view, I sent the view immediately and then requested the poster from the
-							<span class="code">/ajax/titles/posters/:title_id</span> route using JQuery. 
+							I also wrote all of the logic for the AJAX routes. These are routes that JQuery makes AJAX requests to so that the page can load resources asynchronously. For example,
+							instead of waiting for the title poster to load before sending the view, I send the view immediately and then request the poster from the
+							<span class="code">/ajax/titles/posters/:title_id</span> route. 
 						</p>
 						<p>
 							An interesting ajax route to look at is the <span class="code">/ajax/cast/:title_id</span> route. This required me to write a separate function,
-							<span class="code">data_retriever.getCastFromTitleId()</span>. This was one of the more difficult parts of the project and is outlined
+							<span class="code">data_retriever.getCastFromTitleId()</span>. This was one of the most difficult parts of the project and is outlined
 							in the difficulties section below.
 						</p>
 					<div class="mb-25">
 					    <h3 class="mb-title">Difficulties</h3>
 					    <h4>GET CAST</h4>
 					    <p>
-					    	The most difficult part of this project was writing the <span class="code">getCastFromTitleId()</span> function in the get_data.js custom module.
+                            The most difficult part of this project was writing the <span class="code">getCastFromTitleId()</span> function in the 
+                            <a class="link" href="https://github.com/colesam/IMDB-Wiki/blob/master/custom_modules/get_data.js?ts=4" target="_blank">get_data.js custom module</a>.
 					    	The purpose of this function is to take a title_id and find the cast for that title. Unfortunately, the way the database was set up makes this very difficult.
 					    </p>
 					    <p>
-					    	The database keeps the cast split into two tables, Principals and Crew. There Schemas looked like this:
+					    	The database keeps the cast split into two tables, Principals and Crew. The schemas for these tables looked like this:
 					    </p>
 					    <p>
 					    	<span class="code">Principals(tconst, ordering, nconst, category, job, characters)</span>
@@ -130,19 +131,19 @@
 					    	<span class="code">Crew(tconst, directors, writers)</span>
 					    </p>
 					    <p>
-					    	Principals was very easy to join with the Names database because it had an <span class="code">nconst</span> column that acts as a name id. Crew on the other handle
-					    	supplies you with a comma-delimited list of name ids for directors and writers, given a particular title id. To make matters worse, there were duplicates between 
+					    	Principals was very easy to join with the Names database because it had an <span class="code">nconst</span> column that acts as a name id. Unfortunately, the Crew table
+					    	supplies you with a comma-delimited list of name ids for directors and writers when given a particular title id. To make matters worse, there were duplicates between 
 					    	Principals and Crew. For example, sometimes a director was included in Principals and Crew, sometimes only in Principals, and sometimes only in Crew.
 					    </p>
 					    <p>
-					    	I attacked this problem by writing a second helper function <span class="code">getDataByIdArray()</span> inside <span class="code">get_data.js</span>. I would
-					    	convert the comma-delimited list of name ids into an array and pass it to this function. The function would return a <span class="code">Promise.all</span> object
-					    	that I could use to get an array of rows from the Name table.
+					    	I attacked this problem by writing a second helper function <span class="code">getDataByIdArray()</span> inside <span class="code">get_data.js</span>. I simply
+					    	convert the comma-delimited list of name ids into an array and pass it to this function. The function returns a <span class="code">Promise.all</span> object
+					    	that I use to get an array of rows from the Names table.
 					    </p>
 					    <p>
-					    	By abstracting out the most complicated part of getting the Cast, I was able to clean up my <span class="code">getCastFromTitleId()</span> to only do the following.
-					    	First, use a promise to get an array of rows from the Name table that correspond to Principals from the title we are working with. Next, use a promise to get an array
-					    	of rows from the Name table that correspond to Crew members. Once both of these promises resolve, combine the two arrays while using name ids to ensure there are no
+					    	By abstracting out the most complicated step in getting the Cast, I was able to clean up my <span class="code">getCastFromTitleId()</span> function to only do the following:
+					    	First, use a promise to get the names of each Principal for the given title id by performing a SQL join on Principals and Names. Next, use a promise to get an array
+					    	of rows from the Names table that correspond to Crew members. Once both of these promises resolve, combine the two arrays while using name ids to ensure there are no
 					    	duplicates.
 					    </p>
 					    <h4>LOGIC-LESS TEMPLATING</h4>
@@ -153,18 +154,18 @@
 					    <p>
 					    	An example of how I overcame this problem can be seen in the 
 					    	<a class="link" href="https://github.com/colesam/IMDB-Wiki/blob/master/views/title-edit.hjs" target="_blank">root/views/title-edit.hjs</a> template. The .hjs templates only
-					    	support whether or not a variable has been set, but do not support checking if the variable has been set to a particular value.
+					    	support checking whether or not a variable has been set, but do not support checking if the variable has been set to a particular value.
 					    </p>
 					    <p>
-					    	I wanted to have the genres associated with the title being edited to be pre-selected in the form. Within the <span class="code">/titles/:title_id/edit</span> route,
-					    	a video object is passed to the <span class="code">title-edit.hjs</span> view. For each genre associated with this video, I added an attribute to the video object so that
-					    	I could set the selected options with the following line within each option element of the select input:
+					    	For the title being edited, I want the active genres to be pre-selected in the form. Within the <span class="code">/titles/:title_id/edit</span> route,
+					    	a video object is passed to the <span class="code">title-edit.hjs</span> view. For each genre associated with this video, I added an attribute to the video object. Then I
+					    	put the following line within each option element of the genre select input:
 					    </p>
 					    <p>
 					    	<span class="code">{{#video.Romance}}selected{{/video.Romance}}</span>
 					    </p>
 					    <p>
-					    	This would check if the passed video object had a 'Romance' attribute. If it did, it would set the romance option to selected, solving my logic-less templating issue. In
+					    	This line of code checks if the passed video object had a 'Romance' attribute. If it does, it sets the romance option to selected, solving my logic-less templating issue. In
 					    	the future I would choose a different templating engine to avoid having to hack this functionality together.
 					    </p>
 					</div>
